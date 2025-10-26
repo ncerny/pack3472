@@ -1,6 +1,6 @@
 ---
 layout: announcement
-title: "New Pack Website Launch!"
+title: 'New Pack Website Launch!'
 date: 2025-10-26
 priority: normal
 published: true
@@ -13,21 +13,25 @@ We're excited to announce the launch of our brand new pack website! This site wi
 ## What's New
 
 ### 📅 **Events Calendar**
+
 - View all upcoming activities and events
 - Add events directly to your personal calendar
 - RSVP online for campouts and special events
 
 ### 📢 **Announcements**
+
 - Stay informed with important pack news
 - Get notifications about schedule changes
 - Never miss important deadlines
 
 ### 📸 **Photo Galleries** (Coming Soon!)
+
 - Browse photos from past events
 - Relive the fun and adventures
 - Download photos to share with family
 
 ### 📚 **Resources**
+
 - Access forms and documents
 - Find helpful Cub Scout links
 - Review pack policies and procedures

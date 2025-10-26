@@ -1,29 +1,24 @@
 <!-- Add to Calendar Buttons -->
-{% if page.date and page.title %}
-
-{% assign event_title = page.title | url_encode %}
-{% assign event_location = page.location | default: site.data.pack-info.meeting_info.location.name | url_encode %}
-{% assign event_details = page.excerpt | default: content | strip_html | truncatewords: 50 | url_encode %}
+{% if page.date and page.title %} {% assign event_title = page.title |
+url_encode %} {% assign event_location = page.location | default:
+site.data.pack-info.meeting_info.location.name | url_encode %} {% assign
+event_details = page.excerpt | default: content | strip_html | truncatewords: 50
+| url_encode %}
 
 <!-- Parse date and time -->
-{% assign event_date = page.date | date: "%Y%m%d" %}
-{% if page.time %}
-  {% assign time_parts = page.time | split: " - " %}
-  {% assign start_time = time_parts[0] | replace: ":", "" | replace: " ", "" %}
-  {% assign end_time = time_parts[1] | default: start_time | replace: ":", "" | replace: " ", "" %}
-{% else %}
-  {% assign start_time = "090000" %}
-  {% assign end_time = "170000" %}
-{% endif %}
-
-{% assign dates = event_date | append: "T" | append: start_time | append: "/" | append: event_date | append: "T" | append: end_time %}
+{% assign event_date = page.date | date: "%Y%m%d" %} {% if page.time %} {%
+assign time_parts = page.time | split: " - " %} {% assign start_time =
+time_parts[0] | replace: ":", "" | replace: " ", "" %} {% assign end_time =
+time_parts[1] | default: start_time | replace: ":", "" | replace: " ", "" %} {%
+else %} {% assign start_time = "090000" %} {% assign end_time = "170000" %} {%
+endif %} {% assign dates = event_date | append: "T" | append: start_time |
+append: "/" | append: event_date | append: "T" | append: end_time %}
 
 <div class="add-to-calendar">
   <h4>Add to Your Calendar</h4>
   <div class="add-to-calendar__buttons">
-    
     <!-- Google Calendar -->
-    <a 
+    <a
       href="https://calendar.google.com/calendar/render?action=TEMPLATE&text={{ event_title }}&dates={{ dates }}&details={{ event_details }}&location={{ event_location }}&sf=true&output=xml"
       class="btn btn-primary"
       target="_blank"
@@ -33,9 +28,9 @@
       <span class="btn__icon">📅</span>
       Google Calendar
     </a>
-    
+
     <!-- Apple Calendar / iCal -->
-    <a 
+    <a
       href="data:text/calendar;charset=utf8,BEGIN:VCALENDAR%0AVERSION:2.0%0ABEGIN:VEVENT%0ADTSTART:{{ event_date }}T{{ start_time }}%0ADTEND:{{ event_date }}T{{ end_time }}%0ASUMMARY:{{ event_title }}%0ADESCRIPTION:{{ event_details }}%0ALOCATION:{{ event_location }}%0AEND:VEVENT%0AEND:VCALENDAR"
       class="btn btn-secondary"
       download="{{ page.title | slugify }}.ics"
@@ -44,9 +39,9 @@
       <span class="btn__icon">📱</span>
       Apple Calendar
     </a>
-    
+
     <!-- Outlook -->
-    <a 
+    <a
       href="https://outlook.live.com/calendar/0/deeplink/compose?subject={{ event_title }}&startdt={{ event_date }}T{{ start_time }}&enddt={{ event_date }}T{{ end_time }}&body={{ event_details }}&location={{ event_location }}"
       class="btn btn-outline"
       target="_blank"
@@ -56,16 +51,27 @@
       <span class="btn__icon">📧</span>
       Outlook
     </a>
-    
   </div>
-  
+
   <details class="add-to-calendar__help">
     <summary>Need help adding to your calendar?</summary>
     <div class="help-content">
-      <p><strong>Google Calendar:</strong> Click the button and confirm adding the event to your calendar.</p>
-      <p><strong>Apple Calendar:</strong> Click the button to download an .ics file, then open it to add to Calendar app.</p>
-      <p><strong>Outlook:</strong> Click the button and sign in to Outlook.com to add the event.</p>
-      <p><strong>Other calendars:</strong> Try the Apple Calendar button - most calendar apps can import .ics files.</p>
+      <p>
+        <strong>Google Calendar:</strong> Click the button and confirm adding
+        the event to your calendar.
+      </p>
+      <p>
+        <strong>Apple Calendar:</strong> Click the button to download an .ics
+        file, then open it to add to Calendar app.
+      </p>
+      <p>
+        <strong>Outlook:</strong> Click the button and sign in to Outlook.com to
+        add the event.
+      </p>
+      <p>
+        <strong>Other calendars:</strong> Try the Apple Calendar button - most
+        calendar apps can import .ics files.
+      </p>
     </div>
   </details>
 </div>
@@ -73,66 +79,66 @@
 {% endif %}
 
 <style>
-.add-to-calendar {
-  background: var(--gray-100);
-  padding: 1.5rem;
-  border-radius: 12px;
-  margin: 2rem 0;
-}
+  .add-to-calendar {
+    background: var(--gray-100);
+    padding: 1.5rem;
+    border-radius: 12px;
+    margin: 2rem 0;
+  }
 
-.add-to-calendar h4 {
-  margin-bottom: 1rem;
-  color: var(--bsa-blue);
-}
+  .add-to-calendar h4 {
+    margin-bottom: 1rem;
+    color: var(--bsa-blue);
+  }
 
-.add-to-calendar__buttons {
-  display: flex;
-  gap: 1rem;
-  flex-wrap: wrap;
-  margin-bottom: 1rem;
-}
-
-.add-to-calendar__buttons .btn {
-  flex: 1;
-  min-width: 150px;
-  justify-content: center;
-}
-
-.add-to-calendar__help {
-  margin-top: 1rem;
-  padding-top: 1rem;
-  border-top: 1px solid var(--gray-300);
-}
-
-.add-to-calendar__help summary {
-  cursor: pointer;
-  color: var(--bsa-blue);
-  font-weight: 600;
-  user-select: none;
-}
-
-.add-to-calendar__help summary:hover {
-  color: var(--bsa-gold);
-}
-
-.help-content {
-  margin-top: 1rem;
-  font-size: 0.9rem;
-  color: var(--gray-700);
-  line-height: 1.6;
-}
-
-.help-content p {
-  margin-bottom: 0.5rem;
-}
-
-@media (max-width: 768px) {
   .add-to-calendar__buttons {
-    flex-direction: column;
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-bottom: 1rem;
   }
-  
+
   .add-to-calendar__buttons .btn {
-    width: 100%;
+    flex: 1;
+    min-width: 150px;
+    justify-content: center;
   }
-}
+
+  .add-to-calendar__help {
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--gray-300);
+  }
+
+  .add-to-calendar__help summary {
+    cursor: pointer;
+    color: var(--bsa-blue);
+    font-weight: 600;
+    user-select: none;
+  }
+
+  .add-to-calendar__help summary:hover {
+    color: var(--bsa-gold);
+  }
+
+  .help-content {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    color: var(--gray-700);
+    line-height: 1.6;
+  }
+
+  .help-content p {
+    margin-bottom: 0.5rem;
+  }
+
+  @media (max-width: 768px) {
+    .add-to-calendar__buttons {
+      flex-direction: column;
+    }
+
+    .add-to-calendar__buttons .btn {
+      width: 100%;
+    }
+  }
 </style>

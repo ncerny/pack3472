@@ -3,25 +3,28 @@
   <div class="hero__content">
     <div class="container">
       <h1 class="hero__title">{{ page.hero_title | default: site.title }}</h1>
-      <p class="hero__subtitle">{{ page.hero_subtitle | default: site.description }}</p>
-      
+      <p class="hero__subtitle">
+        {{ page.hero_subtitle | default: site.description }}
+      </p>
+
       <div class="hero__meeting-info">
         <div class="meeting-badge">
           <span class="meeting-badge__icon">📍</span>
           <div class="meeting-badge__details">
-            <strong>We Meet:</strong> {{ site.data.pack-info.meeting_info.day }}s at {{ site.data.pack-info.meeting_info.time }}
-            <br>
-            <span class="meeting-badge__location">{{ site.data.pack-info.meeting_info.location.name }}</span>
+            <strong>We Meet:</strong> {{ site.data.pack-info.meeting_info.day
+            }}s at {{ site.data.pack-info.meeting_info.time }}
+            <br />
+            <span class="meeting-badge__location"
+              >{{ site.data.pack-info.meeting_info.location.name }}</span
+            >
           </div>
         </div>
       </div>
-      
-      <div class="hero__cta">
-        {% include cta-buttons.html %}
-      </div>
+
+      <div class="hero__cta">{% include cta-buttons.html %}</div>
     </div>
   </div>
-  
+
   <div class="hero__image">
     <!-- Background image set via CSS -->
   </div>

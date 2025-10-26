@@ -1,34 +1,35 @@
 <!-- Announcements Feed Component -->
-{% assign all_announcements = site.announcements | sort: "date" | reverse %}
-{% assign current_time = site.time | date: "%s" %}
+{% assign all_announcements = site.announcements | sort: "date" | reverse %} {%
+assign current_time = site.time | date: "%s" %}
 
 <!-- Filter out expired announcements -->
-{% assign active_announcements = "" | split: "" %}
-{% for announcement in all_announcements %}
-  {% if announcement.expires %}
-    {% assign expires_time = announcement.expires | date: "%s" %}
-    {% if expires_time >= current_time %}
-      {% assign active_announcements = active_announcements | push: announcement %}
-    {% endif %}
-  {% else %}
-    {% assign active_announcements = active_announcements | push: announcement %}
-  {% endif %}
-{% endfor %}
-
-{% if active_announcements.size > 0 %}
+{% assign active_announcements = "" | split: "" %} {% for announcement in
+all_announcements %} {% if announcement.expires %} {% assign expires_time =
+announcement.expires | date: "%s" %} {% if expires_time >= current_time %} {%
+assign active_announcements = active_announcements | push: announcement %} {%
+endif %} {% else %} {% assign active_announcements = active_announcements |
+push: announcement %} {% endif %} {% endfor %} {% if active_announcements.size >
+0 %}
 <div class="announcements-feed">
   {% for announcement in active_announcements %}
-  <article class="announcement-card{% if announcement.priority == 'urgent' %} announcement-card--urgent{% elsif announcement.priority == 'high' %} announcement-card--high{% endif %}">
+  <article
+    class="announcement-card{% if announcement.priority == 'urgent' %} announcement-card--urgent{% elsif announcement.priority == 'high' %} announcement-card--high{% endif %}"
+  >
     <header class="announcement-card__header">
       <h3 class="announcement-card__title">
-        <a href="{{ announcement.url | relative_url }}">{{ announcement.title }}</a>
+        <a href="{{ announcement.url | relative_url }}"
+          >{{ announcement.title }}</a
+        >
       </h3>
-      
+
       <div class="announcement-card__meta">
-        <time class="announcement-card__date" datetime="{{ announcement.date | date_to_xmlschema }}">
+        <time
+          class="announcement-card__date"
+          datetime="{{ announcement.date | date_to_xmlschema }}"
+        >
           {{ announcement.date | date: "%B %d, %Y" }}
         </time>
-        
+
         {% if announcement.priority == 'urgent' %}
         <span class="badge badge-danger">🚨 Urgent</span>
         {% elsif announcement.priority == 'high' %}
@@ -36,18 +37,21 @@
         {% endif %}
       </div>
     </header>
-    
+
     {% if announcement.excerpt %}
     <div class="announcement-card__excerpt">
       {{ announcement.excerpt | strip_html | truncatewords: 50 }}
     </div>
     {% endif %}
-    
+
     <footer class="announcement-card__footer">
-      <a href="{{ announcement.url | relative_url }}" class="announcement-card__link">
+      <a
+        href="{{ announcement.url | relative_url }}"
+        class="announcement-card__link"
+      >
         Read Full Announcement →
       </a>
-      
+
       {% if announcement.expires %}
       <small class="announcement-card__expires">
         Expires: {{ announcement.expires | date: "%B %d, %Y" }}
@@ -61,24 +65,33 @@
 {% if active_announcements.size > 10 %}
 <div class="pagination">
   <p class="text-center text-muted">
-    <em>Showing {{ active_announcements.size }} announcements. Older announcements are automatically archived.</em>
+    <em
+      >Showing {{ active_announcements.size }} announcements. Older
+      announcements are automatically archived.</em
+    >
+  </p>
+</div>
+{% endif %} {% else %}
+<div class="no-announcements">
+  <p>📢 No current announcements.</p>
+  <p>
+    <em
+      >Important pack news and updates will appear here. Announcements added
+      through the admin panel will display automatically.</em
+    >
   </p>
 </div>
 {% endif %}
 
-{% else %}
-<div class="no-announcements">
-  <p>📢 No current announcements.</p>
-  <p><em>Important pack news and updates will appear here. Announcements added through the admin panel will display automatically.</em></p>
-</div>
-{% endif %}
-
 <!-- Archived notice -->
-{% assign archived_count = all_announcements.size | minus: active_announcements.size %}
-{% if archived_count > 0 %}
+{% assign archived_count = all_announcements.size | minus:
+active_announcements.size %} {% if archived_count > 0 %}
 <div class="archived-notice">
   <p class="text-muted text-center">
-    <small>{{ archived_count }} announcement{% if archived_count > 1 %}s have{% else %} has{% endif %} expired and been archived.</small>
+    <small
+      >{{ archived_count }} announcement{% if archived_count > 1 %}s have{% else
+      %} has{% endif %} expired and been archived.</small
+    >
   </p>
 </div>
 {% endif %}

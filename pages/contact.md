@@ -53,11 +53,13 @@ Fill out the form below and we'll get back to you within 24 hours!
 ## Pack Leadership
 
 ### Cubmaster
+
 {% assign cubmaster = site.data.leaders | where: "role", "Cubmaster" | first %}
 **{{ cubmaster.name }}**  
 📧 [{{ cubmaster.email }}](mailto:{{ cubmaster.email }})
 
 ### Committee Chair
+
 {% assign chair = site.data.leaders | where: "role", "Committee Chair" | first %}
 **{{ chair.name }}**  
 📧 [{{ chair.email }}](mailto:{{ chair.email }})
@@ -79,6 +81,7 @@ Fill out the form below and we'll get back to you within 24 hours!
 Before reaching out, you might find answers to common questions on our [Join Us](/pages/join#frequently-asked-questions) page.
 
 **Quick Answers:**
+
 - **When do you meet?** {{ site.data.pack-info.meeting_info.day }}s at {{ site.data.pack-info.meeting_info.time }}
 - **Where do you meet?** {{ site.data.pack-info.meeting_info.location.name }}
 - **Who can join?** Boys and girls in kindergarten through 5th grade
@@ -90,17 +93,17 @@ Before reaching out, you might find answers to common questions on our [Join Us]
 ## Connect With Us
 
 {% if site.data.pack-info.contact.facebook %}
-[Facebook]({{ site.data.pack-info.contact.facebook }}){:.btn .btn-outline target="_blank"}
+[Facebook]({{ site.data.pack-info.contact.facebook }}){:.btn .btn-outline target="\_blank"}
 {% endif %}
 
 {% if site.data.pack-info.contact.instagram %}
-[Instagram]({{ site.data.pack-info.contact.instagram }}){:.btn .btn-outline target="_blank"}
+[Instagram]({{ site.data.pack-info.contact.instagram }}){:.btn .btn-outline target="\_blank"}
 {% endif %}
 
 ---
 
 ## Other Resources
 
-- [Boy Scouts of America](https://www.scouting.org/){:target="_blank"}
-- [{{ site.data.pack-info.council }}]({{ site.data.pack-info.council_website }}){:target="_blank"}
-- [Cub Scout Parent Resources](https://www.scouting.org/programs/cub-scouts/preview-adventures/){:target="_blank"}
+- [Boy Scouts of America](https://www.scouting.org/){:target="\_blank"}
+- [{{ site.data.pack-info.council }}]({{ site.data.pack-info.council_website }}){:target="\_blank"}
+- [Cub Scout Parent Resources](https://www.scouting.org/programs/cub-scouts/preview-adventures/){:target="\_blank"}

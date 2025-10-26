@@ -18,6 +18,7 @@ We aim to build character, develop citizenship, and promote personal fitness in 
 Cub Scouting is part of the Boy Scouts of America (BSA) program designed for boys and girls in kindergarten through 5th grade. Through age-appropriate activities, games, crafts, and adventures, Cub Scouts learn the values of the Scout Oath and Law while having fun.
 
 **Scout Oath:**
+
 > On my honor I will do my best  
 > To do my duty to God and my country  
 > and to obey the Scout Law;  
@@ -26,6 +27,7 @@ Cub Scouting is part of the Boy Scouts of America (BSA) program designed for boy
 > mentally awake, and morally straight.
 
 **Scout Law:**
+
 > A Scout is: Trustworthy, Loyal, Helpful, Friendly, Courteous, Kind, Obedient, Cheerful, Thrifty, Brave, Clean, and Reverent.
 
 ## Our Program
@@ -35,6 +37,7 @@ Cub Scouting is part of the Boy Scouts of America (BSA) program designed for boy
 Cub Scouts progress through age-based ranks, earning badges and awards as they complete adventures and learn new skills:
 
 {% for den in site.data.dens %}
+
 #### {{ den.rank }} ({{ den.grade }} Grade, Ages {{ den.age_range }})
 
 {{ den.description }}
@@ -44,6 +47,7 @@ Cub Scouts progress through age-based ranks, earning badges and awards as they c
 **Den Leader**: {% assign leader = site.data.leaders | where: "name", den.leader | first %}{{ leader.name }}
 
 ---
+
 {% endfor %}
 
 ### Activities & Adventures
@@ -74,7 +78,9 @@ Scouts earn recognition for their accomplishments:
 Pack 3472 is led by dedicated volunteer leaders committed to providing a quality scouting experience:
 
 {% for leader in site.data.leaders %}
+
 ### {{ leader.name }}
+
 **{{ leader.role }}**
 
 {% if leader.photo %}
@@ -88,6 +94,7 @@ Pack 3472 is led by dedicated volunteer leaders committed to providing a quality
 {% endif %}
 
 ---
+
 {% endfor %}
 
 ## Pack Values

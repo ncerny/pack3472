@@ -1,11 +1,11 @@
 ---
 layout: event
-title: "Pinewood Derby Workshop"
+title: 'Pinewood Derby Workshop'
 date: 2025-12-07
-time: "10:00 AM - 2:00 PM"
-location: "Lincoln Elementary School Gym"
-event_type: "Family Event"
-rsvp_link: "https://forms.gle/SAMPLE_DERBY_RSVP"
+time: '10:00 AM - 2:00 PM'
+location: 'Lincoln Elementary School Gym'
+event_type: 'Family Event'
+rsvp_link: 'https://forms.gle/SAMPLE_DERBY_RSVP'
 published: true
 ---
 

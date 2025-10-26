@@ -1,11 +1,11 @@
 ---
 layout: event
-title: "Fall Campout at Camp Illinek"
+title: 'Fall Campout at Camp Illinek'
 date: 2025-11-22
-time: "Friday 5:00 PM - Sunday 2:00 PM"
-location: "Camp Illinek, Springfield, IL"
-event_type: "Campout"
-rsvp_link: "https://forms.gle/SAMPLE_CAMPOUT_RSVP"
+time: 'Friday 5:00 PM - Sunday 2:00 PM'
+location: 'Camp Illinek, Springfield, IL'
+event_type: 'Campout'
+rsvp_link: 'https://forms.gle/SAMPLE_CAMPOUT_RSVP'
 featured: true
 published: true
 ---
@@ -39,6 +39,7 @@ Pack 3472's annual fall campout is coming up! Join us for a weekend of camping, 
 ## What to Bring
 
 ### Essential Gear
+
 - Tent (or share with another family)
 - Sleeping bag rated for 40°F or below
 - Sleeping pad or air mattress
@@ -46,6 +47,7 @@ Pack 3472's annual fall campout is coming up! Join us for a weekend of camping, 
 - Flashlight or headlamp with extra batteries
 
 ### Clothing
+
 - Warm layers (it gets cold at night!)
 - Rain jacket
 - Extra socks and underwear
@@ -54,6 +56,7 @@ Pack 3472's annual fall campout is coming up! Join us for a weekend of camping, 
 - Scout uniform for ceremonies
 
 ### Personal Items
+
 - Toiletries and towel
 - Water bottle
 - Sunscreen and bug spray
@@ -61,6 +64,7 @@ Pack 3472's annual fall campout is coming up! Join us for a weekend of camping, 
 - Camp chair (optional)
 
 ### Do NOT Bring
+
 - Electronics (phones ok for parents, but discouraged for scouts)
 - Fireworks or weapons
 - Pets
@@ -77,6 +81,7 @@ All participants must have a current BSA Annual Health & Medical Record (Parts A
 ## Questions?
 
 Contact our Camping Coordinator:
+
 - **Email**: camping@pack3472.org
 - **Phone**: (555) 123-4567
 

@@ -1,11 +1,11 @@
 ---
 layout: event
-title: "Community Food Drive Service Project"
+title: 'Community Food Drive Service Project'
 date: 2025-11-09
-time: "9:00 AM - 12:00 PM"
-location: "Springfield Food Bank, 123 Main Street"
-event_type: "Service Project"
-rsvp_link: "https://forms.gle/SAMPLE_SERVICE_RSVP"
+time: '9:00 AM - 12:00 PM'
+location: 'Springfield Food Bank, 123 Main Street'
+event_type: 'Service Project'
+rsvp_link: 'https://forms.gle/SAMPLE_SERVICE_RSVP'
 published: true
 ---
 

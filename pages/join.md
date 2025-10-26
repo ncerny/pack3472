@@ -14,7 +14,7 @@ We're excited that you're interested in joining Pack 3472! Cub Scouting is open 
 **Kindergarten through 5th Grade** (ages 5-10)
 
 - **Lions** - Kindergarten
-- **Tigers** - 1st Grade  
+- **Tigers** - 1st Grade
 - **Wolves** - 2nd Grade
 - **Bears** - 3rd Grade
 - **Webelos** - 4th Grade
@@ -33,7 +33,7 @@ Visit us at one of our weekly pack meetings to see what we're all about!
 {{ site.data.pack-info.meeting_info.location.address }}  
 {{ site.data.pack-info.meeting_info.location.city }}, {{ site.data.pack-info.meeting_info.location.state }} {{ site.data.pack-info.meeting_info.location.zip }}
 
-[Get Directions]({{ site.data.pack-info.meeting_info.location.google_maps_url }}){:.btn .btn-outline target="_blank"}
+[Get Directions]({{ site.data.pack-info.meeting_info.location.google_maps_url }}){:.btn .btn-outline target="\_blank"}
 
 **No RSVP required** - just show up! We'll have a leader available to answer questions and help with registration.
 
@@ -82,6 +82,7 @@ Membership fees cover your scout's registration with BSA national, pack activiti
 ### First Meeting
 
 Your scout will:
+
 - Meet their Den Leader and den members
 - Participate in activities and games
 - Learn about their rank requirements
@@ -108,6 +109,7 @@ Parents are welcome and encouraged to stay, especially for younger scouts (Lions
 ### Special Events
 
 Throughout the year, pack events include:
+
 - Campouts and outdoor adventures
 - Pinewood Derby car race
 - Blue & Gold Banquet
@@ -131,7 +133,7 @@ Throughout the year, pack events include:
 
 ### For Parents
 
-- **Involvement**: We encourage family participation! 
+- **Involvement**: We encourage family participation!
 - **Communication**: Check emails and pack calendar regularly
 - **Support**: Help with pack events and activities (as able)
 - **Background Check**: Required for all adult volunteers
@@ -196,7 +198,7 @@ We can't wait to welcome you to Pack 3472!
 
 Have questions? Fill out our [contact form](/pages/contact) and we'll get back to you within 24 hours!
 
-[Contact Us](/pages/contact){:.btn .btn-primary} [Visit BSA Website](https://www.scouting.org/){:.btn .btn-outline target="_blank"}
+[Contact Us](/pages/contact){:.btn .btn-primary} [Visit BSA Website](https://www.scouting.org/){:.btn .btn-outline target="\_blank"}
 
 ---
 

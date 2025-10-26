@@ -17,7 +17,7 @@
   .calendar-embed {
     display: none;
   }
-  
+
   .calendar-embed-mobile {
     display: block;
     margin: 2rem 0;
@@ -75,7 +75,7 @@
 }
 
 .subscribe-instructions summary::before {
-  content: "▶";
+  content: '▶';
   font-size: 0.875rem;
   transition: transform 0.3s ease;
 }
@@ -164,11 +164,11 @@
   .events-filter__controls {
     grid-template-columns: 1fr 1fr;
   }
-  
+
   .events-filter__controls > :first-child {
     grid-column: 1 / -1;
   }
-  
+
   .events-filter__controls > :last-child {
     grid-column: 1 / -1;
   }
@@ -178,11 +178,11 @@
   .events-filter {
     padding: 1.5rem;
   }
-  
+
   .events-filter__controls {
     grid-template-columns: 1fr;
   }
-  
+
   .events-filter__controls > :first-child {
     grid-column: 1;
   }
@@ -236,7 +236,11 @@
 }
 
 .event-card__date {
-  background: linear-gradient(135deg, $bsa-blue 0%, darken($bsa-blue, 10%) 100%);
+  background: linear-gradient(
+    135deg,
+    $bsa-blue 0%,
+    darken($bsa-blue, 10%) 100%
+  );
   color: white;
   border-radius: 8px;
   padding: 1rem;
@@ -321,12 +325,12 @@
     grid-template-columns: 1fr;
     gap: 1rem;
   }
-  
+
   .event-card__date {
     min-height: auto;
     padding: 0.75rem;
   }
-  
+
   .event-card__day {
     font-size: 2rem;
   }
@@ -465,15 +469,15 @@
 }
 
 .event-date::before {
-  content: "📅";
+  content: '📅';
 }
 
 .event-time::before {
-  content: "🕐";
+  content: '🕐';
 }
 
 .event-location::before {
-  content: "📍";
+  content: '📍';
 }
 
 .event-content {
@@ -506,7 +510,11 @@
 }
 
 .event-rsvp {
-  background: linear-gradient(135deg, $bsa-blue 0%, darken($bsa-blue, 10%) 100%);
+  background: linear-gradient(
+    135deg,
+    $bsa-blue 0%,
+    darken($bsa-blue, 10%) 100%
+  );
   padding: 2rem;
   border-radius: 12px;
   text-align: center;
@@ -537,24 +545,24 @@
   .subscribe-buttons {
     flex-direction: column;
   }
-  
+
   .subscribe-buttons .btn {
     width: 100%;
   }
-  
+
   .event-title {
     font-size: 2rem;
   }
-  
+
   .event-meta {
     flex-direction: column;
     gap: 0.75rem;
   }
-  
+
   .event-card__actions {
     flex-direction: column;
   }
-  
+
   .event-card__actions .btn {
     width: 100%;
   }
@@ -564,11 +572,11 @@
   .calendar-subscribe {
     padding: 1.5rem;
   }
-  
+
   .event-title {
     font-size: 1.75rem;
   }
-  
+
   .event-rsvp {
     padding: 1.5rem;
   }

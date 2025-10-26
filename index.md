@@ -49,6 +49,7 @@ Cub Scouting is the adventure for boys and girls in kindergarten through 5th gra
 ### Our Dens
 
 {% for den in site.data.dens %}
+
 <div class="den-card">
   <h4 class="badge badge-{{ den.rank | downcase }}">{{ den.rank }}</h4>
   <p><strong>{{ den.grade }} Grade</strong> (Ages {{ den.age_range }})</p>

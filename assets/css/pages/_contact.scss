@@ -194,7 +194,11 @@
 }
 
 .info-card--highlight {
-  background: linear-gradient(135deg, $bsa-blue 0%, darken($bsa-blue, 10%) 100%);
+  background: linear-gradient(
+    135deg,
+    $bsa-blue 0%,
+    darken($bsa-blue, 10%) 100%
+  );
   color: white;
 }
 

@@ -3,7 +3,7 @@
  * Event filtering, search, and categorization functionality
  */
 
-(function() {
+(function () {
   'use strict';
 
   // Wait for DOM to be ready
@@ -113,9 +113,12 @@
   }
 
   function applyFilters() {
-    const searchTerm = document.getElementById('event-search')?.value.toLowerCase() || '';
-    const selectedType = document.getElementById('event-type-filter')?.value || 'all';
-    const selectedDate = document.getElementById('event-date-filter')?.value || 'all';
+    const searchTerm =
+      document.getElementById('event-search')?.value.toLowerCase() || '';
+    const selectedType =
+      document.getElementById('event-type-filter')?.value || 'all';
+    const selectedDate =
+      document.getElementById('event-date-filter')?.value || 'all';
 
     // Get all event cards
     const eventCards = document.querySelectorAll('.event-card');
@@ -124,14 +127,16 @@
     // Get date range for filtering
     const dateRange = getDateRange(selectedDate);
 
-    eventCards.forEach(card => {
+    eventCards.forEach((card) => {
       let shouldShow = true;
 
       // Search filter
       if (searchTerm) {
-        const title = card.querySelector('.card-title')?.textContent.toLowerCase() || '';
-        const excerpt = card.querySelector('.card-text')?.textContent.toLowerCase() || '';
-        
+        const title =
+          card.querySelector('.card-title')?.textContent.toLowerCase() || '';
+        const excerpt =
+          card.querySelector('.card-text')?.textContent.toLowerCase() || '';
+
         if (!title.includes(searchTerm) && !excerpt.includes(searchTerm)) {
           shouldShow = false;
         }
@@ -184,12 +189,24 @@
         return { start: today, end: monthEnd };
 
       case 'next-month':
-        const nextMonthStart = new Date(today.getFullYear(), today.getMonth() + 1, 1);
-        const nextMonthEnd = new Date(today.getFullYear(), today.getMonth() + 2, 0);
+        const nextMonthStart = new Date(
+          today.getFullYear(),
+          today.getMonth() + 1,
+          1
+        );
+        const nextMonthEnd = new Date(
+          today.getFullYear(),
+          today.getMonth() + 2,
+          0
+        );
         return { start: nextMonthStart, end: nextMonthEnd };
 
       case 'next-3-months':
-        const threeMonthsEnd = new Date(today.getFullYear(), today.getMonth() + 3, today.getDate());
+        const threeMonthsEnd = new Date(
+          today.getFullYear(),
+          today.getMonth() + 3,
+          today.getDate()
+        );
         return { start: today, end: threeMonthsEnd };
 
       default:
@@ -231,7 +248,7 @@
 
     // Parse hash parameters (format: #search=term&type=pack-meeting&date=this-month)
     const params = new URLSearchParams(hash);
-    
+
     const searchInput = document.getElementById('event-search');
     const typeFilter = document.getElementById('event-type-filter');
     const dateFilter = document.getElementById('event-date-filter');
@@ -253,7 +270,7 @@
 
   function updateHash(search, type, date) {
     const params = new URLSearchParams();
-    
+
     if (search) params.set('search', search);
     if (type !== 'all') params.set('type', type);
     if (date !== 'all') params.set('date', date);
@@ -282,14 +299,16 @@
   // Add data attributes to event cards for filtering
   function initializeEventCards() {
     const eventCards = document.querySelectorAll('.event-card');
-    
-    eventCards.forEach(card => {
+
+    eventCards.forEach((card) => {
       // Extract event type from badge if not already set
       if (!card.getAttribute('data-event-type')) {
         const badge = card.querySelector('.badge');
         if (badge) {
           // Extract type from badge class (e.g., 'badge-pack-meeting' -> 'pack-meeting')
-          const badgeClass = Array.from(badge.classList).find(cls => cls.startsWith('badge-'));
+          const badgeClass = Array.from(badge.classList).find((cls) =>
+            cls.startsWith('badge-')
+          );
           if (badgeClass) {
             const eventType = badgeClass.replace('badge-', '');
             card.setAttribute('data-event-type', eventType);
@@ -304,7 +323,10 @@
           // Try to parse date from time element or text content
           const timeElement = dateElement.querySelector('time');
           if (timeElement && timeElement.getAttribute('datetime')) {
-            card.setAttribute('data-event-date', timeElement.getAttribute('datetime'));
+            card.setAttribute(
+              'data-event-date',
+              timeElement.getAttribute('datetime')
+            );
           }
         }
       }
@@ -313,5 +335,4 @@
 
   // Initialize event cards data attributes
   initializeEventCards();
-
 })();

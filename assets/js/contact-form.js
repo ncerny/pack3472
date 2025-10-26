@@ -10,7 +10,7 @@
   const patterns = {
     email: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
     phone: /^[\(\)0-9\s\-]+$/,
-    name: /^[a-zA-Z\s\-']+$/
+    name: /^[a-zA-Z\s\-']+$/,
   };
 
   // Error messages
@@ -18,7 +18,7 @@
     required: 'This field is required',
     email: 'Please enter a valid email address',
     phone: 'Please enter a valid phone number',
-    name: 'Please enter a valid name'
+    name: 'Please enter a valid name',
   };
 
   /**
@@ -73,10 +73,12 @@
    * @returns {boolean} - True if all fields valid, false otherwise
    */
   function validateForm(form) {
-    const fields = form.querySelectorAll('input[required], select[required], textarea[required]');
+    const fields = form.querySelectorAll(
+      'input[required], select[required], textarea[required]'
+    );
     let isValid = true;
 
-    fields.forEach(field => {
+    fields.forEach((field) => {
       if (!validateField(field)) {
         isValid = false;
       }
@@ -114,7 +116,7 @@
     // Submit form (iframe handles redirect)
     try {
       form.submit();
-      
+
       // Show success message
       successMsg.style.display = 'block';
       successMsg.focus();
@@ -124,11 +126,10 @@
       setTimeout(() => {
         form.reset();
         // Remove validation classes
-        form.querySelectorAll('.form-control').forEach(field => {
+        form.querySelectorAll('.form-control').forEach((field) => {
           field.classList.remove('form-control--valid', 'form-control--error');
         });
       }, 500);
-
     } catch (error) {
       console.error('Form submission error:', error);
       errorMsg.style.display = 'block';
@@ -143,14 +144,14 @@
    */
   function initContactForm() {
     const form = document.getElementById('contact-form');
-    
+
     if (!form) {
       return; // Form not on this page
     }
 
     // Add real-time validation on blur
     const fields = form.querySelectorAll('input, select, textarea');
-    fields.forEach(field => {
+    fields.forEach((field) => {
       field.addEventListener('blur', () => {
         if (field.value.trim()) {
           validateField(field);
@@ -177,5 +178,4 @@
   } else {
     initContactForm();
   }
-
 })();

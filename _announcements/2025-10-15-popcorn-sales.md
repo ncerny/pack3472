@@ -1,6 +1,6 @@
 ---
 layout: announcement
-title: "Fall Popcorn Sales Are Here!"
+title: 'Fall Popcorn Sales Are Here!'
 date: 2025-10-15
 priority: high
 published: true
@@ -21,8 +21,9 @@ Pack 3472's annual popcorn fundraiser is our biggest source of funding for campo
 ## Where Money Goes
 
 Funds from popcorn sales support:
+
 - Camping trips and outdoor adventures
-- Pack meeting supplies and activities  
+- Pack meeting supplies and activities
 - Rank advancement materials
 - Equipment and gear
 - Scholarship assistance for scouts in need
@@ -30,6 +31,7 @@ Funds from popcorn sales support:
 ## Top Sellers Win Big!
 
 Scouts selling $1000+ earn **BONUS PRIZES** including:
+
 - Special activity passes
 - Exclusive camping gear
 - Scout shop gift cards

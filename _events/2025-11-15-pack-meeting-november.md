@@ -1,11 +1,11 @@
 ---
 layout: event
-title: "Pack Meeting - November Adventure"
+title: 'Pack Meeting - November Adventure'
 date: 2025-11-15
-time: "6:30 PM - 8:00 PM"
-location: "Lincoln Elementary School Cafeteria"
-event_type: "Pack Meeting"
-rsvp_link: "https://forms.gle/SAMPLE_RSVP_FORM"
+time: '6:30 PM - 8:00 PM'
+location: 'Lincoln Elementary School Cafeteria'
+event_type: 'Pack Meeting'
+rsvp_link: 'https://forms.gle/SAMPLE_RSVP_FORM'
 featured: true
 published: true
 ---

@@ -1,27 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  {% include head.html %}
-</head>
-<body>
-  {% include header.html %}
-  {% include nav.html %}
+  <head>
+    {% include head.html %}
+  </head>
+  <body>
+    {% include header.html %} {% include nav.html %}
 
-  <!-- Hero Section -->
-  {% if page.layout == 'home' %}
-  {% include hero.html %}
-  {% endif %}
+    <!-- Hero Section -->
+    {% if page.layout == 'home' %} {% include hero.html %} {% endif %}
 
-  <!-- Main Content -->
-  <main id="main-content" class="site-main">
-    <div class="container">
-      {{ content }}
-    </div>
-  </main>
+    <!-- Main Content -->
+    <main id="main-content" class="site-main">
+      <div class="container">{{ content }}</div>
+    </main>
 
-  {% include footer.html %}
-  {% include analytics.html %}
+    {% include footer.html %} {% include analytics.html %}
 
-  <script src="{{ '/assets/js/main.js' | relative_url }}"></script>
-</body>
+    <script src="{{ '/assets/js/main.js' | relative_url }}"></script>
+  </body>
 </html>

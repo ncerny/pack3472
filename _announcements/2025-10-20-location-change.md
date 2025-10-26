@@ -1,6 +1,6 @@
 ---
 layout: announcement
-title: "Updated Meeting Location for November"
+title: 'Updated Meeting Location for November'
 date: 2025-10-20
 priority: urgent
 expires: 2025-11-01
