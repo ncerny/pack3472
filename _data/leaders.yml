@@ -1,0 +1,44 @@
+leaders:
+  - name: 'John Smith'
+    role: 'Cubmaster'
+    email: 'cubmaster@pack3472.org'
+    photo: '/assets/images/leaders/placeholder.jpg'
+    bio: 'John has been with Pack 3472 for 5 years and brings enthusiasm and outdoor expertise to our pack. Eagle Scout and father of two cubs.'
+    order: 1
+
+  - name: 'Jane Doe'
+    role: 'Committee Chair'
+    email: 'committee@pack3472.org'
+    photo: '/assets/images/leaders/placeholder.jpg'
+    bio: 'Jane brings organizational expertise and ensures our pack runs smoothly. Mother of three and passionate about youth development.'
+    order: 2
+
+  - name: 'Mike Johnson'
+    role: 'Den Leader - Tigers'
+    email: 'tigers@pack3472.org'
+    photo: '/assets/images/leaders/placeholder.jpg'
+    den: 'Tigers'
+    bio: 'Mike leads our Tiger den with energy and creativity. Former Cub Scout and dedicated volunteer.'
+    order: 3
+
+  - name: 'Sarah Williams'
+    role: 'Den Leader - Wolves'
+    email: 'wolves@pack3472.org'
+    photo: '/assets/images/leaders/placeholder.jpg'
+    den: 'Wolves'
+    bio: 'Sarah brings patience and fun to our Wolf den. Experienced outdoor educator and parent.'
+    order: 4
+
+  - name: 'David Brown'
+    role: 'Treasurer'
+    email: 'treasurer@pack3472.org'
+    photo: '/assets/images/leaders/placeholder.jpg'
+    bio: 'David manages our pack finances with transparency and care. CPA by trade and Scout parent.'
+    order: 5
+
+  - name: 'Emily Davis'
+    role: 'Advancement Chair'
+    email: 'advancement@pack3472.org'
+    photo: '/assets/images/leaders/placeholder.jpg'
+    bio: 'Emily tracks scout progress and coordinates badge ceremonies. Detail-oriented and encouraging.'
+    order: 6

@@ -26,7 +26,7 @@ Static Jekyll site structure at repository root. All paths relative to `/Users/n
 - [x] T001 Create Jekyll project structure with \_config.yml, Gemfile, and directory structure per plan.md
 - [x] T002 [P] Configure Jekyll in \_config.yml with site title, description, URL, theme settings
 - [x] T003 [P] Create Gemfile with Jekyll dependencies (jekyll, jekyll-feed, jekyll-seo-tag, jekyll-sitemap)
-- [ ] T004 [P] Setup GitHub repository settings for GitHub Pages deployment (enable Pages, set source branch)
+- [x] T004 [P] Setup GitHub repository settings for GitHub Pages deployment (enable Pages, set source branch)
 - [x] T005 [P] Configure custom domain (pack3472.org) in GitHub Pages settings and CNAME file
 - [x] T006 [P] Create basic layouts in \_layouts/ directory (default.html, page.html, post.html)
 - [x] T007 [P] Create reusable includes in \_includes/ (header.html, footer.html, nav.html, head.html)
@@ -49,25 +49,25 @@ Static Jekyll site structure at repository root. All paths relative to `/Users/n
 
 **⚠️ CRITICAL**: No user story work can begin until this phase is complete
 
-- [ ] T018 Populate \_data/pack-info.yml with Pack 3472 details (name, number, meeting info, contact) per data-model.md
-- [ ] T019 [P] Populate \_data/leaders.yml with leadership roster per data-model.md
-- [ ] T020 [P] Populate \_data/dens.yml with den information per data-model.md
-- [ ] T021 Implement responsive navigation component in \_includes/nav.html with mobile hamburger menu
-- [ ] T022 [P] Implement header component in \_includes/header.html with pack logo and branding
-- [ ] T023 [P] Implement footer component in \_includes/footer.html with contact info and links
-- [ ] T024 Create default page layout in \_layouts/default.html assembling header, nav, content, footer
-- [ ] T025 [P] Implement base CSS styles in assets/css/base.css with typography, colors, spacing
-- [ ] T026 [P] Implement responsive grid system in assets/css/grid.css for mobile-first layout
-- [ ] T027 [P] Create CSS components in assets/css/components/ (buttons, cards, forms, badges)
-- [ ] T028 [P] Implement utility CSS classes in assets/css/utilities.css (spacing, display, colors)
+- [x] T018 Populate \_data/pack-info.yml with Pack 3472 details (name, number, meeting info, contact) per data-model.md
+- [x] T019 [P] Populate \_data/leaders.yml with leadership roster per data-model.md
+- [x] T020 [P] Populate \_data/dens.yml with den information per data-model.md
+- [x] T021 Implement responsive navigation component in \_includes/nav.html with mobile hamburger menu
+- [x] T022 [P] Implement header component in \_includes/header.html with pack logo and branding
+- [x] T023 [P] Implement footer component in \_includes/footer.html with contact info and links
+- [x] T024 Create default page layout in \_layouts/default.html assembling header, nav, content, footer
+- [x] T025 [P] Implement base CSS styles in assets/css/base.css with typography, colors, spacing
+- [x] T026 [P] Implement responsive grid system in assets/css/grid.css for mobile-first layout
+- [x] T027 [P] Create CSS components in assets/css/components/ (buttons, cards, forms, badges)
+- [x] T028 [P] Implement utility CSS classes in assets/css/utilities.css (spacing, display, colors)
 - [ ] T029 [P] Optimize and add pack logo SVG to assets/images/logo.svg
 - [ ] T030 [P] Add BSA Cub Scout branding assets to assets/images/badges/ per BSA guidelines
-- [ ] T031 [P] Create 404 error page in 404.html with helpful navigation back to main site
-- [ ] T032 [P] Implement SEO meta tags in \_includes/head.html with Jekyll SEO plugin
+- [x] T031 [P] Create 404 error page in 404.html with helpful navigation back to main site
+- [x] T032 [P] Implement SEO meta tags in \_includes/head.html with Jekyll SEO plugin
 - [ ] T033 [P] Create sitemap.xml configuration for search engine indexing
-- [ ] T034 [P] Implement Google Analytics integration in \_includes/analytics.html (optional)
-- [ ] T035 Setup Netlify CMS configuration in admin/config.yml for content management per research.md
-- [ ] T036 Create Netlify CMS admin interface in admin/index.html for pack leader access
+- [x] T034 [P] Implement Google Analytics integration in \_includes/analytics.html (optional)
+- [x] T035 Setup Netlify CMS configuration in admin/config.yml for content management per research.md
+- [x] T036 Create Netlify CMS admin interface in admin/index.html for pack leader access
 
 **Checkpoint**: Foundation ready - user story implementation can now begin in parallel
 

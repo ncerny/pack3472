@@ -1,0 +1,39 @@
+pack_number: 3472
+pack_name: 'Pack 3472'
+chartered_organization: 'Lincoln Elementary School PTA'
+council: 'Great Rivers Council'
+district: 'Pioneer District'
+
+meeting_info:
+  day: 'Tuesday'
+  time: '6:30 PM - 7:30 PM'
+  location:
+    name: 'Lincoln Elementary School'
+    address: '123 Main Street'
+    city: 'Springfield'
+    state: 'IL'
+    zip: '62701'
+    google_maps_url: 'https://goo.gl/maps/example'
+
+contact:
+  email: 'info@pack3472.org'
+  phone: '(555) 123-4567'
+  facebook: 'https://facebook.com/pack3472'
+  instagram: 'pack3472'
+
+membership:
+  ages: 'Kindergarten - 5th Grade'
+  grade_levels: ['K', '1', '2', '3', '4', '5']
+  ranks: ['Lion', 'Tiger', 'Wolf', 'Bear', 'Webelos', 'Arrow of Light']
+
+fees:
+  registration: '$100'
+  uniform: '$40-60'
+  handbook: '$15'
+  additional_activities: 'Varies by event'
+  payment_info: 'Checks payable to Pack 3472'
+
+about:
+  established: 2010
+  charter_partner: 'Lincoln Elementary School PTA'
+  mission: 'To provide a fun, educational, and character-building program for elementary-aged children through outdoor adventures, service projects, and leadership development.'

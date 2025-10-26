@@ -1,0 +1,175 @@
+backend:
+  name: git-gateway
+  branch: main
+
+# Publish mode
+publish_mode: editorial_workflow
+
+# Media files
+media_folder: "assets/images/uploads"
+public_folder: "/assets/images/uploads"
+
+# Collections
+collections:
+  # Events Collection
+  - name: "events"
+    label: "Events"
+    folder: "_events"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    editor:
+      preview: true
+    fields:
+      - {label: "Layout", name: "layout", widget: "hidden", default: "event"}
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Date", name: "date", widget: "datetime"}
+      - {label: "Time", name: "time", widget: "string", hint: "e.g., 6:30 PM - 8:00 PM"}
+      - {label: "Location", name: "location", widget: "string"}
+      - {label: "Event Type", name: "event_type", widget: "select", options: ["Pack Meeting", "Den Meeting", "Campout", "Service Project", "Fundraiser", "Family Event"]}
+      - {label: "Description", name: "body", widget: "markdown"}
+      - {label: "RSVP Link", name: "rsvp_link", widget: "string", required: false, hint: "Google Form URL for signups"}
+      - {label: "Featured", name: "featured", widget: "boolean", default: false}
+      - {label: "Published", name: "published", widget: "boolean", default: true}
+
+  # Announcements Collection
+  - name: "announcements"
+    label: "Announcements"
+    folder: "_announcements"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    editor:
+      preview: true
+    fields:
+      - {label: "Layout", name: "layout", widget: "hidden", default: "announcement"}
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Date", name: "date", widget: "datetime"}
+      - {label: "Priority", name: "priority", widget: "select", options: ["normal", "high", "urgent"], default: "normal"}
+      - {label: "Content", name: "body", widget: "markdown"}
+      - {label: "Expiration Date", name: "expires", widget: "datetime", required: false, hint: "When to automatically hide this announcement"}
+      - {label: "Published", name: "published", widget: "boolean", default: true}
+
+  # Galleries Collection
+  - name: "galleries"
+    label: "Photo Galleries"
+    folder: "_galleries"
+    create: true
+    slug: "{{slug}}"
+    editor:
+      preview: false
+    fields:
+      - {label: "Layout", name: "layout", widget: "hidden", default: "gallery"}
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Date", name: "date", widget: "datetime"}
+      - {label: "Description", name: "description", widget: "text", required: false}
+      - {label: "Cover Image", name: "cover_image", widget: "image", required: false}
+      - label: "Images"
+        name: "images"
+        widget: "list"
+        fields:
+          - {label: "Image", name: "url", widget: "image"}
+          - {label: "Caption", name: "caption", widget: "string", required: false, hint: "Use first names only, no last names"}
+      - {label: "Published", name: "published", widget: "boolean", default: true}
+
+  # Pages Collection
+  - name: "pages"
+    label: "Pages"
+    files:
+      - label: "Homepage"
+        name: "index"
+        file: "index.md"
+        fields:
+          - {label: "Layout", name: "layout", widget: "hidden", default: "home"}
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Hero Title", name: "hero_title", widget: "string"}
+          - {label: "Hero Subtitle", name: "hero_subtitle", widget: "string"}
+          - {label: "Content", name: "body", widget: "markdown"}
+      
+      - label: "About Page"
+        name: "about"
+        file: "pages/about.md"
+        fields:
+          - {label: "Layout", name: "layout", widget: "hidden", default: "page"}
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Subtitle", name: "subtitle", widget: "string", required: false}
+          - {label: "Content", name: "body", widget: "markdown"}
+      
+      - label: "Join Us Page"
+        name: "join"
+        file: "pages/join.md"
+        fields:
+          - {label: "Layout", name: "layout", widget: "hidden", default: "page"}
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Subtitle", name: "subtitle", widget: "string", required: false}
+          - {label: "Content", name: "body", widget: "markdown"}
+      
+      - label: "Contact Page"
+        name: "contact"
+        file: "pages/contact.md"
+        fields:
+          - {label: "Layout", name: "layout", widget: "hidden", default: "page"}
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Subtitle", name: "subtitle", widget: "string", required: false}
+          - {label: "Content", name: "body", widget: "markdown"}
+
+  # Data Files
+  - name: "data"
+    label: "Pack Information"
+    files:
+      - label: "Pack Details"
+        name: "pack_info"
+        file: "_data/pack-info.yml"
+        fields:
+          - {label: "Pack Number", name: "pack_number", widget: "number"}
+          - {label: "Pack Name", name: "pack_name", widget: "string"}
+          - {label: "Chartered Organization", name: "chartered_organization", widget: "string"}
+          - {label: "Council", name: "council", widget: "string"}
+          - {label: "District", name: "district", widget: "string"}
+          - label: "Meeting Information"
+            name: "meeting_info"
+            widget: "object"
+            fields:
+              - {label: "Day", name: "day", widget: "select", options: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]}
+              - {label: "Time", name: "time", widget: "string"}
+              - label: "Location"
+                name: "location"
+                widget: "object"
+                fields:
+                  - {label: "Name", name: "name", widget: "string"}
+                  - {label: "Address", name: "address", widget: "string"}
+                  - {label: "City", name: "city", widget: "string"}
+                  - {label: "State", name: "state", widget: "string"}
+                  - {label: "ZIP", name: "zip", widget: "string"}
+                  - {label: "Google Maps URL", name: "google_maps_url", widget: "string"}
+          - label: "Contact"
+            name: "contact"
+            widget: "object"
+            fields:
+              - {label: "Email", name: "email", widget: "string"}
+              - {label: "Phone", name: "phone", widget: "string"}
+              - {label: "Facebook", name: "facebook", widget: "string", required: false}
+              - {label: "Instagram", name: "instagram", widget: "string", required: false}
+          - label: "Fees"
+            name: "fees"
+            widget: "object"
+            fields:
+              - {label: "Registration", name: "registration", widget: "string"}
+              - {label: "Uniform", name: "uniform", widget: "string"}
+              - {label: "Handbook", name: "handbook", widget: "string"}
+              - {label: "Additional Activities", name: "additional_activities", widget: "string"}
+              - {label: "Payment Info", name: "payment_info", widget: "string"}
+
+      - label: "Leadership Roster"
+        name: "leaders"
+        file: "_data/leaders.yml"
+        fields:
+          - label: "Leaders"
+            name: "leaders"
+            widget: "list"
+            fields:
+              - {label: "Name", name: "name", widget: "string"}
+              - {label: "Role", name: "role", widget: "string"}
+              - {label: "Email", name: "email", widget: "string"}
+              - {label: "Photo", name: "photo", widget: "image", required: false}
+              - {label: "Bio", name: "bio", widget: "text", required: false}
+              - {label: "Den", name: "den", widget: "string", required: false}
+              - {label: "Display Order", name: "order", widget: "number"}
