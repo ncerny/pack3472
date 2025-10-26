@@ -1,0 +1,159 @@
+<!-- Contact Form -->
+<form id="contact-form" class="contact-form" action="https://docs.google.com/forms/d/e/YOUR_FORM_ID/formResponse" method="POST" target="hidden_iframe" onsubmit="submitContactForm(event)">
+  
+  <div class="form-group">
+    <label for="name" class="form-label">
+      Your Name <span class="required">*</span>
+    </label>
+    <input 
+      type="text" 
+      id="name" 
+      name="entry.YOUR_NAME_FIELD_ID" 
+      class="form-control" 
+      required 
+      aria-required="true"
+      placeholder="John Smith"
+    >
+    <span class="form-error" id="name-error" aria-live="polite"></span>
+  </div>
+
+  <div class="form-group">
+    <label for="email" class="form-label">
+      Email Address <span class="required">*</span>
+    </label>
+    <input 
+      type="email" 
+      id="email" 
+      name="entry.YOUR_EMAIL_FIELD_ID" 
+      class="form-control" 
+      required 
+      aria-required="true"
+      placeholder="john.smith@example.com"
+    >
+    <span class="form-error" id="email-error" aria-live="polite"></span>
+  </div>
+
+  <div class="form-group">
+    <label for="phone" class="form-label">
+      Phone Number
+    </label>
+    <input 
+      type="tel" 
+      id="phone" 
+      name="entry.YOUR_PHONE_FIELD_ID" 
+      class="form-control"
+      placeholder="(555) 123-4567"
+      pattern="[\(\)0-9\s\-]+"
+    >
+    <span class="form-help">Optional - we'll only call if you request it</span>
+    <span class="form-error" id="phone-error" aria-live="polite"></span>
+  </div>
+
+  <div class="form-group">
+    <label for="scout-name" class="form-label">
+      Scout's Name (if applicable)
+    </label>
+    <input 
+      type="text" 
+      id="scout-name" 
+      name="entry.YOUR_SCOUT_NAME_FIELD_ID" 
+      class="form-control"
+      placeholder="Child's first name"
+    >
+  </div>
+
+  <div class="form-group">
+    <label for="scout-grade" class="form-label">
+      Scout's Grade (if applicable)
+    </label>
+    <select id="scout-grade" name="entry.YOUR_GRADE_FIELD_ID" class="form-control">
+      <option value="">Select grade...</option>
+      <option value="kindergarten">Kindergarten (Lions)</option>
+      <option value="1st">1st Grade (Tigers)</option>
+      <option value="2nd">2nd Grade (Wolves)</option>
+      <option value="3rd">3rd Grade (Bears)</option>
+      <option value="4th">4th Grade (Webelos)</option>
+      <option value="5th">5th Grade (Arrow of Light)</option>
+    </select>
+  </div>
+
+  <div class="form-group">
+    <label for="subject" class="form-label">
+      What can we help you with? <span class="required">*</span>
+    </label>
+    <select id="subject" name="entry.YOUR_SUBJECT_FIELD_ID" class="form-control" required aria-required="true">
+      <option value="">Please select...</option>
+      <option value="join">I want to join Pack 3472</option>
+      <option value="visit">I'd like to visit a meeting</option>
+      <option value="question">I have a question about Cub Scouts</option>
+      <option value="volunteer">I'm interested in volunteering</option>
+      <option value="other">Other</option>
+    </select>
+    <span class="form-error" id="subject-error" aria-live="polite"></span>
+  </div>
+
+  <div class="form-group">
+    <label for="message" class="form-label">
+      Message <span class="required">*</span>
+    </label>
+    <textarea 
+      id="message" 
+      name="entry.YOUR_MESSAGE_FIELD_ID" 
+      class="form-control" 
+      rows="6" 
+      required 
+      aria-required="true"
+      placeholder="Tell us more about your interest in Pack 3472..."
+    ></textarea>
+    <span class="form-error" id="message-error" aria-live="polite"></span>
+  </div>
+
+  <div class="form-group">
+    <button type="submit" class="btn btn-primary btn-lg">
+      <span class="btn__icon">📧</span>
+      Send Message
+    </button>
+  </div>
+
+  <div id="form-success" class="alert alert-success" style="display: none;" role="alert">
+    <strong>Thank you!</strong> Your message has been sent. We'll get back to you within 24 hours.
+  </div>
+
+  <div id="form-error" class="alert alert-error" style="display: none;" role="alert">
+    <strong>Oops!</strong> There was a problem submitting your form. Please try emailing us directly at 
+    <a href="mailto:{{ site.data.pack-info.contact.email }}">{{ site.data.pack-info.contact.email }}</a>.
+  </div>
+
+</form>
+
+<!-- Hidden iframe for form submission -->
+<iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>
+
+<p class="form-note">
+  <small><span class="required">*</span> Required fields</small>
+</p>
+
+<!-- Setup Instructions for Pack Leaders -->
+<!-- 
+  TO CONFIGURE THIS FORM:
+  1. Create a Google Form with the following fields:
+     - Name (Short answer, required)
+     - Email (Short answer, required, email validation)
+     - Phone (Short answer, optional)
+     - Scout's Name (Short answer, optional)
+     - Scout's Grade (Dropdown, optional)
+     - Subject (Dropdown, required)
+     - Message (Paragraph, required)
+  
+  2. Click "Send" → Get pre-filled link → Copy the URL
+  
+  3. Replace in the form action above:
+     - YOUR_FORM_ID with the form ID from the URL
+     - entry.YOUR_NAME_FIELD_ID with the entry ID for name field
+     - entry.YOUR_EMAIL_FIELD_ID with the entry ID for email field
+     - etc. for each field
+  
+  4. Test the form to ensure submissions appear in your Google Form responses
+  
+  See docs/ADMIN-GUIDE.md for detailed instructions with screenshots.
+-->

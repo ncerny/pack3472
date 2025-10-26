@@ -12,3 +12,7 @@ layout: default
 
   <div class="page-content">{{ content }}</div>
 </article>
+
+{% if page.permalink == '/contact/' %}
+<script src="{{ '/assets/js/contact-form.js' | relative_url }}"></script>
+{% endif %}

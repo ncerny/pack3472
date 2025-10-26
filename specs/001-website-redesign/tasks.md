@@ -81,21 +81,21 @@ Static Jekyll site structure at repository root. All paths relative to `/Users/n
 
 ### Implementation for User Story 1
 
-- [ ] T037 [P] [US1] Create homepage layout in \_layouts/home.html with hero section, info cards, CTA buttons
-- [ ] T038 [P] [US1] Create homepage content in index.md with welcome message and pack overview
-- [ ] T039 [US1] Implement hero section in \_includes/hero.html using pack-info.yml data with meeting location/time
-- [ ] T040 [P] [US1] Create "About" page in pages/about.md with pack history, grade levels, ranks, BSA connection
-- [ ] T041 [P] [US1] Create "Join Us" page in pages/join.md with registration steps, fees, what to expect
-- [ ] T042 [US1] Implement call-to-action buttons in \_includes/cta-buttons.html (Join Pack 3472, Contact Us)
-- [ ] T043 [US1] Create contact page in pages/contact.md with multiple contact methods
-- [ ] T044 [US1] Implement contact form component in \_includes/contact-form.html with name, email, phone, message fields
-- [ ] T045 [US1] Integrate Google Forms for contact submissions per contracts/google-drive-integration.md
-- [ ] T046 [US1] Implement form validation and success confirmation in assets/js/contact-form.js
-- [ ] T047 [P] [US1] Create membership info section in \_includes/membership-info.html displaying fees and payment options
-- [ ] T048 [P] [US1] Add clickable phone number and email links with tel: and mailto: protocols
-- [ ] T049 [P] [US1] Implement Google Maps integration for meeting location in \_includes/map-embed.html
-- [ ] T050 [US1] Style homepage hero and CTA sections in assets/css/pages/home.css with fun, engaging design
-- [ ] T051 [US1] Ensure mobile responsiveness for all US1 pages with viewport testing
+- [x] T037 [P] [US1] Create homepage layout in \_layouts/home.html with hero section, info cards, CTA buttons
+- [x] T038 [P] [US1] Create homepage content in index.md with welcome message and pack overview
+- [x] T039 [US1] Implement hero section in \_includes/hero.html using pack-info.yml data with meeting location/time
+- [x] T040 [P] [US1] Create "About" page in pages/about.md with pack history, grade levels, ranks, BSA connection
+- [x] T041 [P] [US1] Create "Join Us" page in pages/join.md with registration steps, fees, what to expect
+- [x] T042 [US1] Implement call-to-action buttons in \_includes/cta-buttons.html (Join Pack 3472, Contact Us)
+- [x] T043 [US1] Create contact page in pages/contact.md with multiple contact methods
+- [x] T044 [US1] Implement contact form component in \_includes/contact-form.html with name, email, phone, message fields
+- [x] T045 [US1] Integrate Google Forms for contact submissions per contracts/google-drive-integration.md
+- [x] T046 [US1] Implement form validation and success confirmation in assets/js/contact-form.js
+- [x] T047 [P] [US1] Create membership info section in \_includes/membership-info.html displaying fees and payment options
+- [x] T048 [P] [US1] Add clickable phone number and email links with tel: and mailto: protocols
+- [x] T049 [P] [US1] Implement Google Maps integration for meeting location in \_includes/map-embed.html
+- [x] T050 [US1] Style homepage hero and CTA sections in assets/css/pages/home.css with fun, engaging design
+- [x] T051 [US1] Ensure mobile responsiveness for all US1 pages with viewport testing
 
 **Acceptance Validation for User Story 1**:
 
