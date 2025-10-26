@@ -36,15 +36,14 @@ Cub Scouting is part of the Boy Scouts of America (BSA) program designed for boy
 
 Cub Scouts progress through age-based ranks, earning badges and awards as they complete adventures and learn new skills:
 
-{% for den in site.data.dens %}
+{% for den in site.data.dens.dens %}
 
-#### {{ den.rank }} ({{ den.grade }} Grade, Ages {{ den.age_range }})
+#### {{ den.rank }} ({{ den.grade }}, Ages {{ den.age }})
 
 {{ den.description }}
 
 **Meets**: {{ den.meeting_day }}s at {{ den.meeting_time }}
-{% if den.location %}**Location**: {{ den.location }}{% endif %}
-**Den Leader**: {% assign leader = site.data.leaders | where: "name", den.leader | first %}{{ leader.name }}
+**Den Leader**: {{ den.den_leader }}
 
 ---
 

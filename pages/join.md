@@ -185,10 +185,10 @@ We can't wait to welcome you to Pack 3472!
 
 ### Contact Us
 
-**Cubmaster**: {% assign cubmaster = site.data.leaders | where: "role", "Cubmaster" | first %}{{ cubmaster.name }}  
+**Cubmaster**: {% assign cubmaster = site.data.leaders.leaders | where: "role", "Cubmaster" | first %}{{ cubmaster.name }}  
 📧 Email: [{{ cubmaster.email }}](mailto:{{ cubmaster.email }})
 
-**Committee Chair**: {% assign chair = site.data.leaders | where: "role", "Committee Chair" | first %}{{ chair.name }}  
+**Committee Chair**: {% assign chair = site.data.leaders.leaders | where: "role", "Committee Chair" | first %}{{ chair.name }}  
 📧 Email: [{{ chair.email }}](mailto:{{ chair.email }})
 
 **Pack Email**: [{{ site.data.pack-info.contact.email }}](mailto:{{ site.data.pack-info.contact.email }})  

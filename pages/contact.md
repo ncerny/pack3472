@@ -54,19 +54,19 @@ Fill out the form below and we'll get back to you within 24 hours!
 
 ### Cubmaster
 
-{% assign cubmaster = site.data.leaders | where: "role", "Cubmaster" | first %}
+{% assign cubmaster = site.data.leaders.leaders | where: "role", "Cubmaster" | first %}
 **{{ cubmaster.name }}**  
 📧 [{{ cubmaster.email }}](mailto:{{ cubmaster.email }})
 
 ### Committee Chair
 
-{% assign chair = site.data.leaders | where: "role", "Committee Chair" | first %}
+{% assign chair = site.data.leaders.leaders | where: "role", "Committee Chair" | first %}
 **{{ chair.name }}**  
 📧 [{{ chair.email }}](mailto:{{ chair.email }})
 
 ### Den Leaders
 
-{% for leader in site.data.leaders %}
+{% for leader in site.data.leaders.leaders %}
 {% if leader.role contains "Den Leader" %}
 **{{ leader.name }}** - {{ leader.role }}  
 📧 [{{ leader.email }}](mailto:{{ leader.email }})
