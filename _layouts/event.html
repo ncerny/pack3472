@@ -1,0 +1,30 @@
+---
+layout: default
+---
+
+<article class="event">
+  <header class="event-header">
+    <h1 class="event-title">{{ page.title }}</h1>
+    <div class="event-meta">
+      <time class="event-date" datetime="{{ page.date | date_to_xmlschema }}">
+        {{ page.date | date: "%B %d, %Y" }}
+      </time>
+      {% if page.time %}
+        <span class="event-time">{{ page.time }}</span>
+      {% endif %}
+      {% if page.location %}
+        <span class="event-location">{{ page.location }}</span>
+      {% endif %}
+    </div>
+  </header>
+  
+  <div class="event-content">
+    {{ content }}
+  </div>
+  
+  {% if page.rsvp_link %}
+    <div class="event-rsvp">
+      <a href="{{ page.rsvp_link }}" class="btn btn-primary" target="_blank" rel="noopener">RSVP for This Event</a>
+    </div>
+  {% endif %}
+</article>

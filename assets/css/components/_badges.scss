@@ -1,0 +1,90 @@
+/* Badge Components */
+
+.badge {
+  display: inline-block;
+  padding: 0.25rem 0.5rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  line-height: 1;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: 3px;
+  text-transform: uppercase;
+}
+
+.badge-primary {
+  background-color: var(--bsa-blue);
+  color: white;
+}
+
+.badge-secondary {
+  background-color: var(--bsa-gold);
+  color: var(--bsa-blue);
+}
+
+.badge-success {
+  background-color: var(--success);
+  color: white;
+}
+
+.badge-warning {
+  background-color: var(--warning);
+  color: var(--gray-900);
+}
+
+.badge-danger {
+  background-color: var(--danger);
+  color: white;
+}
+
+.badge-info {
+  background-color: var(--info);
+  color: white;
+}
+
+/* Rank badges for Cub Scouts */
+.rank-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-weight: 600;
+  font-size: 0.875rem;
+}
+
+.rank-badge img {
+  width: 24px;
+  height: 24px;
+}
+
+.rank-lion {
+  background-color: #FFD700;
+  color: #003F87;
+}
+
+.rank-tiger {
+  background-color: #FF6B00;
+  color: white;
+}
+
+.rank-wolf {
+  background-color: #D4AF37;
+  color: #003F87;
+}
+
+.rank-bear {
+  background-color: #8B4513;
+  color: white;
+}
+
+.rank-webelos {
+  background-color: #003F87;
+  color: #FFC72C;
+}
+
+.rank-aol {
+  background-color: #CE1126;
+  color: white;
+}

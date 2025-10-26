@@ -1,0 +1,76 @@
+/* Card Components */
+
+.card {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.card-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.card-content {
+  padding: var(--spacing-lg);
+}
+
+.card-title {
+  font-size: 1.5rem;
+  margin-bottom: var(--spacing-sm);
+  color: var(--bsa-blue);
+}
+
+.card-text {
+  color: var(--gray-700);
+  margin-bottom: var(--spacing-md);
+}
+
+.card-footer {
+  padding: var(--spacing-md) var(--spacing-lg);
+  background-color: var(--gray-100);
+  border-top: 1px solid var(--gray-300);
+}
+
+/* Card variants */
+.card-primary {
+  border-top: 4px solid var(--bsa-blue);
+}
+
+.card-secondary {
+  border-top: 4px solid var(--bsa-gold);
+}
+
+.card-accent {
+  border-top: 4px solid var(--bsa-red);
+}
+
+/* Horizontal card */
+.card-horizontal {
+  display: flex;
+  flex-direction: row;
+}
+
+.card-horizontal .card-image {
+  width: 200px;
+  height: auto;
+}
+
+@media (max-width: 768px) {
+  .card-horizontal {
+    flex-direction: column;
+  }
+  
+  .card-horizontal .card-image {
+    width: 100%;
+    height: 200px;
+  }
+}

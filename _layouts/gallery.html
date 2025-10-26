@@ -1,0 +1,34 @@
+---
+layout: default
+---
+
+<article class="gallery">
+  <header class="gallery-header">
+    <h1 class="gallery-title">{{ page.title }}</h1>
+    {% if page.date %}
+      <time class="gallery-date" datetime="{{ page.date | date_to_xmlschema }}">
+        {{ page.date | date: "%B %d, %Y" }}
+      </time>
+    {% endif %}
+    {% if page.description %}
+      <p class="gallery-description">{{ page.description }}</p>
+    {% endif %}
+  </header>
+  
+  <div class="gallery-content">
+    {{ content }}
+  </div>
+  
+  {% if page.images %}
+    <div class="photo-grid">
+      {% for image in page.images %}
+        <div class="photo-item">
+          <img src="{{ image.url }}" alt="{{ image.caption | default: page.title }}" loading="lazy">
+          {% if image.caption %}
+            <p class="photo-caption">{{ image.caption }}</p>
+          {% endif %}
+        </div>
+      {% endfor %}
+    </div>
+  {% endif %}
+</article>

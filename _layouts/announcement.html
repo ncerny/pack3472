@@ -1,0 +1,19 @@
+---
+layout: default
+---
+
+<article class="announcement">
+  <header class="announcement-header">
+    <h1 class="announcement-title">{{ page.title }}</h1>
+    <time class="announcement-date" datetime="{{ page.date | date_to_xmlschema }}">
+      {{ page.date | date: "%B %d, %Y at %I:%M %p" }}
+    </time>
+    {% if page.priority %}
+      <span class="announcement-priority priority-{{ page.priority }}">{{ page.priority | upcase }}</span>
+    {% endif %}
+  </header>
+  
+  <div class="announcement-content">
+    {{ content }}
+  </div>
+</article>

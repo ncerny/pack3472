@@ -1,0 +1,148 @@
+/* Base Typography and Elements */
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-family-heading);
+  line-height: 1.2;
+  margin-top: 0;
+  margin-bottom: var(--spacing-md);
+  color: var(--bsa-blue);
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: var(--spacing-lg);
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: var(--spacing-md);
+}
+
+h3 {
+  font-size: 1.75rem;
+}
+
+h4 {
+  font-size: 1.5rem;
+}
+
+h5 {
+  font-size: 1.25rem;
+}
+
+h6 {
+  font-size: 1rem;
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: var(--spacing-md);
+}
+
+a {
+  color: var(--bsa-blue);
+  text-decoration: underline;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: var(--bsa-red);
+}
+
+a:visited {
+  color: var(--bsa-blue);
+}
+
+ul, ol {
+  margin-top: 0;
+  margin-bottom: var(--spacing-md);
+  padding-left: var(--spacing-xl);
+}
+
+li {
+  margin-bottom: var(--spacing-sm);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+figure {
+  margin: 0 0 var(--spacing-lg) 0;
+}
+
+figcaption {
+  font-size: 0.875rem;
+  color: var(--gray-600);
+  margin-top: var(--spacing-sm);
+  text-align: center;
+}
+
+blockquote {
+  margin: var(--spacing-lg) 0;
+  padding-left: var(--spacing-lg);
+  border-left: 4px solid var(--bsa-gold);
+  font-style: italic;
+  color: var(--gray-700);
+}
+
+code {
+  font-family: 'Courier New', monospace;
+  background-color: var(--gray-100);
+  padding: 0.125rem 0.25rem;
+  border-radius: 3px;
+  font-size: 0.875em;
+}
+
+pre {
+  background-color: var(--gray-100);
+  padding: var(--spacing-md);
+  border-radius: 4px;
+  overflow-x: auto;
+}
+
+pre code {
+  background-color: transparent;
+  padding: 0;
+}
+
+hr {
+  border: 0;
+  border-top: 2px solid var(--gray-300);
+  margin: var(--spacing-xl) 0;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: var(--spacing-lg);
+}
+
+th, td {
+  padding: var(--spacing-sm) var(--spacing-md);
+  text-align: left;
+  border-bottom: 1px solid var(--gray-300);
+}
+
+th {
+  background-color: var(--gray-100);
+  font-weight: 600;
+  color: var(--bsa-blue);
+}
+
+/* Responsive typography */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2rem;
+  }
+  
+  h2 {
+    font-size: 1.75rem;
+  }
+  
+  h3 {
+    font-size: 1.5rem;
+  }
+}
