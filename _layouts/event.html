@@ -10,21 +10,24 @@ layout: default
         {{ page.date | date: "%B %d, %Y" }}
       </time>
       {% if page.time %}
-        <span class="event-time">{{ page.time }}</span>
-      {% endif %}
-      {% if page.location %}
-        <span class="event-location">{{ page.location }}</span>
+      <span class="event-time">{{ page.time }}</span>
+      {% endif %} {% if page.location %}
+      <span class="event-location">{{ page.location }}</span>
       {% endif %}
     </div>
   </header>
-  
-  <div class="event-content">
-    {{ content }}
-  </div>
-  
+
+  <div class="event-content">{{ content }}</div>
+
   {% if page.rsvp_link %}
-    <div class="event-rsvp">
-      <a href="{{ page.rsvp_link }}" class="btn btn-primary" target="_blank" rel="noopener">RSVP for This Event</a>
-    </div>
+  <div class="event-rsvp">
+    <a
+      href="{{ page.rsvp_link }}"
+      class="btn btn-primary"
+      target="_blank"
+      rel="noopener"
+      >RSVP for This Event</a
+    >
+  </div>
   {% endif %}
 </article>

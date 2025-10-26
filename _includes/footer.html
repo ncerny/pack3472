@@ -7,39 +7,49 @@
       <div class="footer-section">
         <h3>{{ site.title }}</h3>
         {% if pack_info %}
-          <p>{{ pack_info.chartered_organization }}</p>
-          <p>{{ pack_info.council }}</p>
+        <p>{{ pack_info.chartered_organization }}</p>
+        <p>{{ pack_info.council }}</p>
         {% endif %}
       </div>
-      
+
       <!-- Contact Information -->
       <div class="footer-section">
         <h3>Contact Us</h3>
         {% if pack_info.contact %}
-          <p>
-            Email: <a href="mailto:{{ pack_info.contact.email }}">{{ pack_info.contact.email }}</a>
-          </p>
-          <p>
-            Phone: <a href="tel:{{ pack_info.contact.phone | remove: ' ' | remove: '(' | remove: ')' | remove: '-' }}">{{ pack_info.contact.phone }}</a>
-          </p>
+        <p>
+          Email:
+          <a href="mailto:{{ pack_info.contact.email }}"
+            >{{ pack_info.contact.email }}</a
+          >
+        </p>
+        <p>
+          Phone:
+          <a
+            href="tel:{{ pack_info.contact.phone | remove: ' ' | remove: '(' | remove: ')' | remove: '-' }}"
+            >{{ pack_info.contact.phone }}</a
+          >
+        </p>
         {% else %}
-          <p>
-            Email: <a href="mailto:{{ site.email }}">{{ site.email }}</a>
-          </p>
+        <p>Email: <a href="mailto:{{ site.email }}">{{ site.email }}</a></p>
         {% endif %}
       </div>
-      
+
       <!-- Meeting Information -->
       <div class="footer-section">
         <h3>Meeting Times</h3>
         {% if pack_info.meeting_info %}
-          <p>{{ pack_info.meeting_info.day }}s at {{ pack_info.meeting_info.time }}</p>
-          <p>{{ pack_info.meeting_info.location.name }}</p>
+        <p>
+          {{ pack_info.meeting_info.day }}s at {{ pack_info.meeting_info.time }}
+        </p>
+        <p>{{ pack_info.meeting_info.location.name }}</p>
         {% else %}
-          <p>Check our <a href="{{ '/calendar' | relative_url }}">calendar</a> for meeting times</p>
+        <p>
+          Check our <a href="{{ '/calendar' | relative_url }}">calendar</a> for
+          meeting times
+        </p>
         {% endif %}
       </div>
-      
+
       <!-- Quick Links -->
       <div class="footer-section">
         <h3>Quick Links</h3>
@@ -47,14 +57,24 @@
           <li><a href="{{ '/join' | relative_url }}">Join Our Pack</a></li>
           <li><a href="{{ '/calendar' | relative_url }}">Event Calendar</a></li>
           <li><a href="{{ '/resources' | relative_url }}">Resources</a></li>
-          <li><a href="https://www.scouting.org/" target="_blank" rel="noopener">BSA Official Site</a></li>
+          <li>
+            <a href="https://www.scouting.org/" target="_blank" rel="noopener"
+              >BSA Official Site</a
+            >
+          </li>
         </ul>
       </div>
     </div>
-    
+
     <div class="footer-bottom">
-      <p>&copy; {{ 'now' | date: "%Y" }} {{ site.title }}. Part of the Boy Scouts of America.</p>
-      <p class="footer-disclaimer">This website is maintained by {{ site.title }} volunteers and is not an official BSA website.</p>
+      <p>
+        &copy; {{ 'now' | date: "%Y" }} {{ site.title }}. Part of the Boy Scouts
+        of America.
+      </p>
+      <p class="footer-disclaimer">
+        This website is maintained by {{ site.title }} volunteers and is not an
+        official BSA website.
+      </p>
     </div>
   </div>
 </footer>

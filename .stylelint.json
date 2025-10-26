@@ -12,9 +12,12 @@
     "declaration-no-important": true,
     "property-no-unknown": true,
     "unit-no-unknown": true,
-    "selector-pseudo-class-no-unknown": [true, {
-      "ignorePseudoClasses": ["global"]
-    }],
+    "selector-pseudo-class-no-unknown": [
+      true,
+      {
+        "ignorePseudoClasses": ["global"]
+      }
+    ],
     "selector-pseudo-element-no-unknown": true,
     "comment-no-empty": true,
     "no-invalid-double-slash-comments": true

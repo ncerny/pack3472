@@ -3,45 +3,48 @@
 
 /* Pack 3472 Main Stylesheet */
 
-/* Import components */
-@import "base";
-@import "grid";
-@import "components/header-footer";
-@import "components/buttons";
-@import "components/cards";
-@import "components/forms";
-@import "components/badges";
-@import "utilities";
-@import "pages/home";
+/* Import SCSS variables first */
+@import 'variables';
 
-/* BSA Brand Colors */
+/* Import components */
+@import 'base';
+@import 'grid';
+@import 'components/header-footer';
+@import 'components/buttons';
+@import 'components/cards';
+@import 'components/forms';
+@import 'components/badges';
+@import 'utilities';
+@import 'pages/home';
+
+/* BSA Brand Colors as CSS Custom Properties */
 :root {
-  --bsa-gold: #FFC72C;
-  --bsa-blue: #003F87;
-  --bsa-red: #CE1126;
-  
+  --bsa-gold: #{$bsa-gold};
+  --bsa-blue: #{$bsa-blue};
+  --bsa-red: #{$bsa-red};
+
   /* Extended palette */
   --primary: var(--bsa-blue);
   --secondary: var(--bsa-gold);
   --accent: var(--bsa-red);
-  
+
   /* Neutrals */
-  --gray-100: #f8f9fa;
-  --gray-200: #e9ecef;
-  --gray-300: #dee2e6;
-  --gray-400: #ced4da;
-  --gray-500: #adb5bd;
-  --gray-600: #6c757d;
-  --gray-700: #495057;
-  --gray-800: #343a40;
+  --gray-100: #{$gray-100};
+  --gray-200: #{$gray-200};
+  --gray-300: #{$gray-300};
+  --gray-400: #{$gray-400};
+  --gray-500: #{$gray-500};
+  --gray-600: #{$gray-600};
+  --gray-700: #{$gray-700};
+  --gray-800: #{$gray-800};
   --gray-900: #212529;
-  
+
   /* Semantic colors */
   --success: #28a745;
   --info: #17a2b8;
   --warning: #ffc107;
   --danger: #dc3545;
-  
+
   /* Spacing scale */
   --spacing-xs: 0.25rem;
   --spacing-sm: 0.5rem;
@@ -50,11 +53,12 @@
   --spacing-xl: 2rem;
   --spacing-2xl: 3rem;
   --spacing-3xl: 4rem;
-  
+
   /* Typography */
-  --font-family-base: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  --font-family-heading: "Comic Sans MS", "Marker Felt", cursive, sans-serif;
-  
+  --font-family-base: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    'Helvetica Neue', Arial, sans-serif;
+  --font-family-heading: 'Comic Sans MS', 'Marker Felt', cursive, sans-serif;
+
   /* Breakpoints */
   --breakpoint-sm: 576px;
   --breakpoint-md: 768px;

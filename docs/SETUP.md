@@ -81,15 +81,16 @@ Create a new file in `_events/`:
 ```markdown
 ---
 layout: event
-title: "Spring Campout"
+title: 'Spring Campout'
 date: 2024-05-15
-time: "Friday 6:00 PM - Sunday 11:00 AM"
-location: "Camp Wilderness"
+time: 'Friday 6:00 PM - Sunday 11:00 AM'
+location: 'Camp Wilderness'
 ---
 
 Pack 3472 is heading to Camp Wilderness for our spring campout!
 
 **What to bring:**
+
 - Tent and sleeping bag
 - Warm clothes
 - Water bottle
@@ -103,7 +104,7 @@ Create a new file in `_announcements/`:
 ```markdown
 ---
 layout: announcement
-title: "Pack Meeting This Tuesday"
+title: 'Pack Meeting This Tuesday'
 date: 2024-04-20
 priority: high
 ---
@@ -118,11 +119,11 @@ Edit `_data/pack-info.yml`:
 ```yaml
 pack_number: 3472
 meeting_info:
-  day: "Tuesday"
-  time: "6:30 PM - 7:30 PM"
+  day: 'Tuesday'
+  time: '6:30 PM - 7:30 PM'
 contact:
-  email: "info@pack3472.org"
-  phone: "(555) 123-4567"
+  email: 'info@pack3472.org'
+  phone: '(555) 123-4567'
 ```
 
 ### Testing
@@ -152,12 +153,14 @@ bundle exec htmlproofer ./_site --disable-external
 ### To GitHub Pages
 
 1. **Commit your changes:**
+
    ```bash
    git add .
    git commit -m "Update pack information"
    ```
 
 2. **Push to GitHub:**
+
    ```bash
    git push origin main
    ```
@@ -177,19 +180,20 @@ bundle exec jekyll build
 
 ## Common Commands
 
-| Command | Purpose |
-|---------|---------|
-| `bundle exec jekyll serve` | Run development server |
-| `bundle exec jekyll build` | Build production site |
-| `bundle exec jekyll serve --drafts` | Preview draft posts |
-| `bundle exec jekyll serve --livereload` | Auto-reload browser |
-| `bundle exec jekyll clean` | Clean build cache |
+| Command                                 | Purpose                |
+| --------------------------------------- | ---------------------- |
+| `bundle exec jekyll serve`              | Run development server |
+| `bundle exec jekyll build`              | Build production site  |
+| `bundle exec jekyll serve --drafts`     | Preview draft posts    |
+| `bundle exec jekyll serve --livereload` | Auto-reload browser    |
+| `bundle exec jekyll clean`              | Clean build cache      |
 
 ## Configuration
 
 ### Site Settings
 
 Edit `_config.yml` to change:
+
 - Site title and description
 - Contact email
 - Social media links
@@ -209,6 +213,7 @@ Edit `_config.yml` to change:
 ### "Jekyll command not found"
 
 Install Jekyll:
+
 ```bash
 gem install jekyll bundler
 ```
@@ -216,11 +221,13 @@ gem install jekyll bundler
 ### "Port 4000 already in use"
 
 Kill the process:
+
 ```bash
 kill -9 $(lsof -ti:4000)
 ```
 
 Or use a different port:
+
 ```bash
 bundle exec jekyll serve --port 4001
 ```
@@ -228,11 +235,13 @@ bundle exec jekyll serve --port 4001
 ### "Bundle install fails"
 
 Update RubyGems:
+
 ```bash
 gem update --system
 ```
 
 Then try again:
+
 ```bash
 bundle install
 ```
@@ -248,6 +257,7 @@ bundle install
 Check your SCSS files for syntax errors.
 
 Common issues:
+
 - Missing semicolons
 - Unclosed brackets
 - Invalid property names

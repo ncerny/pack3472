@@ -13,11 +13,13 @@ This guide explains how to deploy the Pack 3472 website to production.
 #### Initial Setup
 
 1. **Enable GitHub Pages**
+
    - Go to repository Settings → Pages
    - Source: "GitHub Actions"
    - Save
 
 2. **Configure Custom Domain** (optional)
+
    - Add `CNAME` file to repository root:
      ```
      pack3472.org
@@ -28,29 +30,31 @@ This guide explains how to deploy the Pack 3472 website to production.
 
 3. **DNS Configuration**
    At your domain registrar, add:
+
    ```
    Type: A
    Name: @
    Value: 185.199.108.153
-   
+
    Type: A
    Name: @
    Value: 185.199.109.153
-   
+
    Type: A
    Name: @
    Value: 185.199.110.153
-   
+
    Type: A
    Name: @
    Value: 185.199.111.153
-   
+
    Type: CNAME
    Name: www
    Value: pack3472.github.io
    ```
 
 4. **Push to Deploy**
+
    ```bash
    git push origin main
    ```
@@ -69,26 +73,31 @@ This guide explains how to deploy the Pack 3472 website to production.
 #### Initial Setup
 
 1. **Install Firebase CLI**
+
    ```bash
    npm install -g firebase-tools
    ```
 
 2. **Login to Firebase**
+
    ```bash
    firebase login
    ```
 
 3. **Initialize Project**
+
    ```bash
    firebase init hosting
    ```
-   
+
    Choose:
+
    - Public directory: `_site`
    - Single-page app: No
    - GitHub Actions: Yes
 
 4. **Build Site**
+
    ```bash
    bundle exec jekyll build
    ```
@@ -101,6 +110,7 @@ This guide explains how to deploy the Pack 3472 website to production.
 #### Custom Domain
 
 1. In Firebase Console:
+
    - Go to Hosting → Custom domain
    - Add `pack3472.org`
    - Follow DNS instructions
@@ -116,12 +126,14 @@ This guide explains how to deploy the Pack 3472 website to production.
 #### Setup
 
 1. **Connect Repository**
+
    - Go to https://netlify.com
    - Click "New site from Git"
    - Connect GitHub account
    - Select `pack3472.org` repository
 
 2. **Build Settings**
+
    - Build command: `jekyll build`
    - Publish directory: `_site`
    - Add environment variable:
@@ -129,6 +141,7 @@ This guide explains how to deploy the Pack 3472 website to production.
      - Value: `production`
 
 3. **Custom Domain**
+
    - Go to Domain settings
    - Add custom domain: `pack3472.org`
    - Follow DNS instructions
@@ -144,11 +157,13 @@ This guide explains how to deploy the Pack 3472 website to production.
 The repository includes `.github/workflows/deploy.yml`:
 
 **Triggers**:
+
 - Push to `main` branch
 - Push to `001-website-redesign` branch
 - Manual workflow dispatch
 
 **Process**:
+
 1. Checkout code
 2. Setup Ruby 3.1
 3. Install dependencies
@@ -156,6 +171,7 @@ The repository includes `.github/workflows/deploy.yml`:
 5. Deploy to GitHub Pages
 
 **Monitoring**:
+
 - View in GitHub → Actions tab
 - Get email on failures
 - Build logs available
@@ -205,25 +221,31 @@ BUNDLE_WITHOUT=development:test
 ```
 
 ### GitHub Pages
+
 - Automatically set by GitHub Actions
 
 ### Firebase
+
 - Configure in `.firebaserc` and `firebase.json`
 
 ### Netlify
+
 - Set in Netlify dashboard → Build settings
 
 ## SSL/HTTPS
 
 ### GitHub Pages
+
 - Automatically provided (Let's Encrypt)
 - Enable in Settings → Pages → "Enforce HTTPS"
 
 ### Firebase
+
 - Automatically provided (SSL certificate)
 - Configured during domain setup
 
 ### Netlify
+
 - Automatically provided (Let's Encrypt)
 - Auto-renews certificates
 
@@ -232,23 +254,28 @@ BUNDLE_WITHOUT=development:test
 After deployment, verify:
 
 1. **Homepage loads**
+
    - Visit https://pack3472.org
    - Check for errors in browser console
 
 2. **All pages accessible**
+
    - Test navigation menu
    - Check events, announcements, gallery
 
 3. **Forms working**
+
    - Submit test contact form
    - Verify email received
 
 4. **External integrations**
+
    - Google Calendar embed visible
    - Resource links work
    - Maps integration functioning
 
 5. **Performance**
+
    - Run Lighthouse audit
    - Check mobile speed
 
@@ -294,11 +321,13 @@ firebase hosting:rollback
 ### Uptime Monitoring
 
 Free services:
+
 - **UptimeRobot**: https://uptimerobot.com
 - **Pingdom**: https://pingdom.com (free plan)
 - **StatusCake**: https://statuscake.com
 
 Setup:
+
 1. Create account
 2. Add monitor for `https://pack3472.org`
 3. Set check frequency: 5 minutes
@@ -313,6 +342,7 @@ Setup:
 ### Error Tracking
 
 Check regularly:
+
 - GitHub Actions logs for build failures
 - Browser console for JavaScript errors
 - 404 pages in analytics
@@ -322,6 +352,7 @@ Check regularly:
 ### Automated Backups
 
 Git repository is your backup:
+
 - All content in version control
 - Push to GitHub regularly
 - Tag releases: `git tag v1.0.0`
@@ -329,10 +360,12 @@ Git repository is your backup:
 ### Additional Backups
 
 1. **Export from Netlify CMS**
+
    - Content is in Git
    - Just pull repository
 
 2. **Database Backup** (if using)
+
    - Not needed for static site
 
 3. **Media Backup**
@@ -344,15 +377,18 @@ Git repository is your backup:
 After successful deployment:
 
 1. **Announce Launch**
+
    - Email pack families
    - Post on social media
    - Share at pack meeting
 
 2. **Submit to Search Engines**
+
    - Google Search Console
    - Bing Webmaster Tools
 
 3. **Monitor First Week**
+
    - Check analytics daily
    - Review any error reports
    - Gather feedback
@@ -365,21 +401,25 @@ After successful deployment:
 ## Maintenance Schedule
 
 ### Weekly
+
 - Review analytics
 - Check for 404 errors
 - Update content as needed
 
 ### Monthly
+
 - Review site performance
 - Update dependencies
 - Check backup integrity
 
 ### Quarterly
+
 - Full security audit
 - Performance optimization
 - Content review and cleanup
 
 ### Annually
+
 - Renew domain
 - Review hosting costs
 - Major content refresh

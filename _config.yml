@@ -7,8 +7,8 @@ email: info@pack3472.org
 description: >-
   Pack 3472 Cub Scouts - Fun, adventure, and learning for elementary-aged children
   in Springfield, IL. Join us for camping, service projects, and outdoor activities!
-baseurl: ""
-url: "https://pack3472.org"
+baseurl: ''
+url: 'https://pack3472.org'
 
 # Build settings
 markdown: kramdown
@@ -32,25 +32,25 @@ collections:
 # Defaults
 defaults:
   - scope:
-      path: ""
-      type: "pages"
+      path: ''
+      type: 'pages'
     values:
-      layout: "page"
+      layout: 'page'
   - scope:
-      path: ""
-      type: "events"
+      path: ''
+      type: 'events'
     values:
-      layout: "event"
+      layout: 'event'
   - scope:
-      path: ""
-      type: "announcements"
+      path: ''
+      type: 'announcements'
     values:
-      layout: "announcement"
+      layout: 'announcement'
   - scope:
-      path: ""
-      type: "galleries"
+      path: ''
+      type: 'galleries'
     values:
-      layout: "gallery"
+      layout: 'gallery'
 
 # Exclude from processing
 exclude:

@@ -25,26 +25,26 @@
 
 /* Primary button */
 .btn-primary {
-  background-color: var(--bsa-blue);
+  background-color: $bsa-blue;
   color: white;
-  border-color: var(--bsa-blue);
+  border-color: $bsa-blue;
 }
 
 .btn-primary:hover {
-  background-color: darken(var(--bsa-blue), 10%);
+  background-color: darken($bsa-blue, 10%);
   color: white;
 }
 
 /* Secondary button */
 .btn-secondary {
-  background-color: var(--bsa-gold);
-  color: var(--bsa-blue);
-  border-color: var(--bsa-gold);
+  background-color: $bsa-gold;
+  color: $bsa-blue;
+  border-color: $bsa-gold;
 }
 
 .btn-secondary:hover {
-  background-color: darken(var(--bsa-gold), 10%);
-  color: var(--bsa-blue);
+  background-color: darken($bsa-gold, 10%);
+  color: $bsa-blue;
 }
 
 /* Outline button */

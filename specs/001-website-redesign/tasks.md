@@ -64,7 +64,7 @@ Static Jekyll site structure at repository root. All paths relative to `/Users/n
 - [ ] T030 [P] Add BSA Cub Scout branding assets to assets/images/badges/ per BSA guidelines
 - [x] T031 [P] Create 404 error page in 404.html with helpful navigation back to main site
 - [x] T032 [P] Implement SEO meta tags in \_includes/head.html with Jekyll SEO plugin
-- [ ] T033 [P] Create sitemap.xml configuration for search engine indexing
+- [x] T033 [P] Create sitemap.xml configuration for search engine indexing
 - [x] T034 [P] Implement Google Analytics integration in \_includes/analytics.html (optional)
 - [x] T035 Setup Netlify CMS configuration in admin/config.yml for content management per research.md
 - [x] T036 Create Netlify CMS admin interface in admin/index.html for pack leader access

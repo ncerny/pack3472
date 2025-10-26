@@ -1,6 +1,11 @@
 /* Base Typography and Elements */
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: var(--font-family-heading);
   line-height: 1.2;
   margin-top: 0;
@@ -53,7 +58,8 @@ a:visited {
   color: var(--bsa-blue);
 }
 
-ul, ol {
+ul,
+ol {
   margin-top: 0;
   margin-bottom: var(--spacing-md);
   padding-left: var(--spacing-xl);
@@ -120,7 +126,8 @@ table {
   margin-bottom: var(--spacing-lg);
 }
 
-th, td {
+th,
+td {
   padding: var(--spacing-sm) var(--spacing-md);
   text-align: left;
   border-bottom: 1px solid var(--gray-300);
@@ -137,11 +144,11 @@ th {
   h1 {
     font-size: 2rem;
   }
-  
+
   h2 {
     font-size: 1.75rem;
   }
-  
+
   h3 {
     font-size: 1.5rem;
   }

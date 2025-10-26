@@ -25,6 +25,7 @@ The Pack 3472 website uses **Netlify CMS** for easy content management. No techn
 ### Your Dashboard
 
 The dashboard shows:
+
 - **Events** - Add/edit pack meetings, campouts, activities
 - **Announcements** - Post news and updates
 - **Galleries** - Upload and organize photos
@@ -96,6 +97,7 @@ Share pack activities through photo galleries.
 ### Photo Guidelines
 
 ⚠️ **IMPORTANT - Youth Protection**
+
 - Use first names only (no last names)
 - No photos that could identify scouts' home locations
 - Get parent permission before posting
@@ -171,15 +173,18 @@ Add downloadable files like permission slips, handbooks, and calendars.
 ### Common Tasks Schedule
 
 **Weekly**:
+
 - Check for new announcements
 - Update event details if changed
 
 **Monthly**:
+
 - Add next month's events
 - Update photo galleries
 - Review and remove old content
 
 **As Needed**:
+
 - Update pack information
 - Add new resources
 - Remove outdated files
@@ -187,21 +192,25 @@ Add downloadable files like permission slips, handbooks, and calendars.
 ## Troubleshooting
 
 ### "I can't log in"
+
 - Check your email and password
 - Request password reset if needed
 - Contact webmaster for access issues
 
 ### "My changes aren't showing"
+
 - Wait 2-3 minutes for site to rebuild
 - Refresh your browser (Ctrl+F5 or Cmd+Shift+R)
 - Check if you clicked "Publish" (not just "Save")
 
 ### "I uploaded a photo but it's too big"
+
 - Use photo editing software to resize
 - Try compressing the file
 - Maximum recommended: 5MB per photo
 
 ### "I made a mistake"
+
 - Go back to the content item
 - Click "Edit"
 - Make corrections
