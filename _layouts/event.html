@@ -19,15 +19,26 @@ layout: default
 
   <div class="event-content">{{ content }}</div>
 
+  {% include add-to-calendar.html %}
+
   {% if page.rsvp_link %}
   <div class="event-rsvp">
     <a
       href="{{ page.rsvp_link }}"
-      class="btn btn-primary"
+      class="btn btn-primary btn-lg"
       target="_blank"
       rel="noopener"
-      >RSVP for This Event</a
-    >
+      >
+      <span class="btn__icon">✓</span>
+      RSVP for This Event
+    </a>
+    <p class="rsvp-info">
+      <small>Please RSVP so we can plan accordingly. RSVPs help us ensure we have enough supplies and transportation for everyone!</small>
+    </p>
   </div>
   {% endif %}
+  
+  <div class="event-footer">
+    <a href="/calendar/" class="btn btn-outline">← Back to Calendar</a>
+  </div>
 </article>

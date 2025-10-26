@@ -1,0 +1,74 @@
+<!-- Calendar Subscription Links -->
+<div class="calendar-subscribe">
+  <h3>Add to Your Calendar</h3>
+  <p>Subscribe to receive automatic updates when new events are added:</p>
+  
+  <div class="subscribe-buttons">
+    <a 
+      href="https://calendar.google.com/calendar/u/0/r?cid=YOUR_CALENDAR_ID@group.calendar.google.com" 
+      class="btn btn-primary"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <span class="btn__icon">📅</span>
+      Add to Google Calendar
+    </a>
+    
+    <a 
+      href="webcal://calendar.google.com/calendar/ical/YOUR_CALENDAR_ID%40group.calendar.google.com/public/basic.ics"
+      class="btn btn-secondary"
+    >
+      <span class="btn__icon">📱</span>
+      Add to Apple Calendar
+    </a>
+    
+    <a 
+      href="https://calendar.google.com/calendar/ical/YOUR_CALENDAR_ID%40group.calendar.google.com/public/basic.ics"
+      class="btn btn-outline"
+      download
+    >
+      <span class="btn__icon">⬇️</span>
+      Download iCal File
+    </a>
+  </div>
+  
+  <details class="subscribe-instructions">
+    <summary>How to subscribe</summary>
+    <div class="subscribe-instructions__content">
+      <h4>Google Calendar</h4>
+      <ol>
+        <li>Click "Add to Google Calendar" above</li>
+        <li>Sign in to your Google account if prompted</li>
+        <li>Click "Add calendar" to confirm</li>
+        <li>Pack 3472 events will appear in your calendar automatically!</li>
+      </ol>
+      
+      <h4>Apple Calendar (iPhone/iPad/Mac)</h4>
+      <ol>
+        <li>Click "Add to Apple Calendar" above</li>
+        <li>When prompted, tap/click "Subscribe"</li>
+        <li>Events will sync automatically to your device</li>
+      </ol>
+      
+      <h4>Outlook or Other Calendar Apps</h4>
+      <ol>
+        <li>Click "Download iCal File" above</li>
+        <li>Open the downloaded .ics file</li>
+        <li>Your calendar app will import the subscription</li>
+        <li>Choose to subscribe (not import) for automatic updates</li>
+      </ol>
+    </div>
+  </details>
+</div>
+
+<!-- 
+  SETUP INSTRUCTIONS:
+  
+  Replace YOUR_CALENDAR_ID in all three links above with your actual 
+  Google Calendar ID (from calendar settings → Integrate calendar).
+  
+  Make sure the calendar is set to "Make available to public" in the
+  calendar sharing settings, or it won't work for subscriptions.
+  
+  See docs/ADMIN-GUIDE.md for detailed setup instructions.
+-->

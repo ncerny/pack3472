@@ -1,0 +1,102 @@
+<!-- Events List Component -->
+{% assign upcoming_events = site.events | where_exp: "event", "event.date >= site.time" | sort: "date" %}
+{% assign past_events = site.events | where_exp: "event", "event.date < site.time" | sort: "date" | reverse %}
+
+{% if upcoming_events.size > 0 %}
+<div class="events-list">
+  <h3>Upcoming Events ({{ upcoming_events.size }})</h3>
+  
+  {% for event in upcoming_events %}
+  <article class="event-card" data-event-type="{{ event.event_type | slugify }}" data-event-date="{{ event.date | date: '%Y-%m-%d' }}">
+    <div class="event-card__date">
+      <span class="event-card__month">{{ event.date | date: "%b" }}</span>
+      <span class="event-card__day">{{ event.date | date: "%d" }}</span>
+      <span class="event-card__year">{{ event.date | date: "%Y" }}</span>
+    </div>
+    
+    <div class="event-card__content">
+      <h4 class="card-title event-card__title">
+        <a href="{{ event.url | relative_url }}">{{ event.title }}</a>
+      </h4>
+      
+      {% if event.event_type %}
+      <span class="badge badge-{{ event.event_type | slugify }}">{{ event.event_type }}</span>
+      {% endif %}
+      
+      <div class="event-card__meta">
+        {% if event.time %}
+        <p class="event-card__time">
+          <span class="event-card__icon">🕐</span> {{ event.time }}
+        </p>
+        {% endif %}
+        
+        {% if event.location %}
+        <p class="event-card__location">
+          <span class="event-card__icon">📍</span> {{ event.location }}
+        </p>
+        {% endif %}
+      </div>
+      
+      {% if event.excerpt %}
+      <p class="card-text event-card__excerpt">{{ event.excerpt | strip_html | truncatewords: 30 }}</p>
+      {% endif %}
+      
+      <div class="event-card__actions">
+        <a href="{{ event.url | relative_url }}" class="btn btn-sm btn-outline">View Details</a>
+        
+        {% if event.rsvp_link %}
+        <a href="{{ event.rsvp_link }}" class="btn btn-sm btn-primary" target="_blank" rel="noopener">
+          <span class="btn__icon">✓</span> RSVP
+        </a>
+        {% endif %}
+      </div>
+    </div>
+  </article>
+  {% endfor %}
+</div>
+{% else %}
+<div class="no-events">
+  <p>📅 No upcoming events scheduled at this time.</p>
+  <p><em>Check back soon for new adventures! Events added through the admin panel will appear here automatically.</em></p>
+</div>
+{% endif %}
+
+{% if include.show_past and past_events.size > 0 %}
+<div class="events-list events-list--past">
+  <h3>Past Events</h3>
+  <p class="text-muted">See what we've been up to!</p>
+  
+  {% assign limit = include.past_limit | default: 5 %}
+  {% for event in past_events limit: limit %}
+  <article class="event-card event-card--past" data-event-type="{{ event.event_type | slugify }}" data-event-date="{{ event.date | date: '%Y-%m-%d' }}">
+    <div class="event-card__date">
+      <span class="event-card__month">{{ event.date | date: "%b" }}</span>
+      <span class="event-card__day">{{ event.date | date: "%d" }}</span>
+      <span class="event-card__year">{{ event.date | date: "%Y" }}</span>
+    </div>
+    
+    <div class="event-card__content">
+      <h4 class="card-title event-card__title">
+        <a href="{{ event.url | relative_url }}">{{ event.title }}</a>
+      </h4>
+      
+      {% if event.event_type %}
+      <span class="badge badge-{{ event.event_type | slugify }}">{{ event.event_type }}</span>
+      {% endif %}
+      
+      {% if event.excerpt %}
+      <p class="event-card__excerpt">{{ event.excerpt | strip_html | truncatewords: 20 }}</p>
+      {% endif %}
+      
+      <a href="{{ event.url | relative_url }}" class="event-card__link">View Details →</a>
+    </div>
+  </article>
+  {% endfor %}
+  
+  {% if past_events.size > limit %}
+  <p class="text-center">
+    <a href="/gallery/" class="btn btn-outline">View More Past Events in Photo Gallery</a>
+  </p>
+  {% endif %}
+</div>
+{% endif %}

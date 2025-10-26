@@ -1,0 +1,324 @@
+/* Announcements Page Styles */
+
+/* Announcements Feed */
+.announcements-feed {
+  margin: 2rem 0;
+}
+
+.announcement-card {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+  border-left: 5px solid;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.announcement-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+}
+
+/* Priority Colors */
+.announcement-card--urgent {
+  border-left-color: #dc3545;
+}
+
+.announcement-card--high {
+  border-left-color: #ffc107;
+}
+
+.announcement-card--normal {
+  border-left-color: $bsa-blue;
+}
+
+.announcement-card__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.announcement-card__title {
+  color: $bsa-blue;
+  font-size: 1.5rem;
+  margin: 0;
+  flex: 1;
+}
+
+.announcement-card--urgent .announcement-card__title {
+  color: #dc3545;
+}
+
+.announcement-card__date {
+  color: $gray-600;
+  font-size: 0.875rem;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.announcement-card__date::before {
+  content: "📅";
+  font-size: 1rem;
+}
+
+.announcement-card__content {
+  line-height: 1.7;
+  color: $gray-700;
+  margin-bottom: 1rem;
+}
+
+.announcement-card__content p:last-child {
+  margin-bottom: 0;
+}
+
+.announcement-card__footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid $gray-300;
+}
+
+/* Priority Badges */
+.badge-urgent {
+  background: #dc3545;
+  color: white;
+  animation: pulse-urgent 2s ease-in-out infinite;
+}
+
+.badge-high {
+  background: #ffc107;
+  color: $bsa-blue;
+}
+
+.badge-normal {
+  background: $bsa-blue;
+  color: white;
+}
+
+@keyframes pulse-urgent {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}
+
+/* Expiration Notice */
+.announcement-card__expiration {
+  color: $gray-600;
+  font-size: 0.8rem;
+  font-style: italic;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.announcement-card__expiration::before {
+  content: "⏰";
+}
+
+/* Archived Count */
+.archived-count {
+  background: $gray-100;
+  padding: 1.5rem;
+  border-radius: 12px;
+  text-align: center;
+  color: $gray-600;
+  margin-top: 2rem;
+  border: 2px dashed $gray-300;
+}
+
+.archived-count strong {
+  color: $bsa-blue;
+}
+
+/* Stay Connected Section */
+.stay-connected {
+  background: linear-gradient(135deg, $bsa-blue 0%, darken($bsa-blue, 10%) 100%);
+  padding: 3rem 2rem;
+  border-radius: 12px;
+  color: white;
+  margin: 3rem 0;
+  text-align: center;
+}
+
+.stay-connected h3 {
+  color: white;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.stay-connected p {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  opacity: 0.95;
+}
+
+.social-links {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.social-links .btn {
+  min-width: 150px;
+  background: white;
+  color: $bsa-blue;
+  border: none;
+}
+
+.social-links .btn:hover {
+  background: $bsa-gold;
+  color: $bsa-blue;
+  transform: translateY(-3px);
+}
+
+/* Announcement Detail Page */
+.announcement {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.announcement-header {
+  margin-bottom: 2rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 3px solid $bsa-gold;
+}
+
+.announcement-title {
+  color: $bsa-blue;
+  margin-bottom: 1rem;
+  font-size: 2.5rem;
+}
+
+.announcement-meta {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  align-items: center;
+  color: $gray-600;
+  font-size: 1rem;
+}
+
+.announcement-content {
+  line-height: 1.8;
+  font-size: 1.05rem;
+}
+
+.announcement-content h2 {
+  color: $bsa-blue;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  font-size: 1.75rem;
+}
+
+.announcement-content h3 {
+  color: $bsa-blue;
+  margin-top: 1.5rem;
+  margin-bottom: 0.75rem;
+  font-size: 1.4rem;
+}
+
+.announcement-content ul,
+.announcement-content ol {
+  margin-left: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.announcement-content li {
+  margin-bottom: 0.5rem;
+}
+
+.announcement-footer {
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 2px solid $gray-300;
+  text-align: center;
+}
+
+/* Alert/Urgent Styling for Detail Page */
+.announcement--urgent .announcement-header {
+  background: #fff5f5;
+  padding: 1.5rem;
+  border-radius: 12px;
+  border-bottom: none;
+  border-left: 5px solid #dc3545;
+}
+
+.announcement--urgent .announcement-title {
+  color: #dc3545;
+}
+
+.announcement--urgent .announcement-title::before {
+  content: "⚠️ ";
+  font-size: 2rem;
+  vertical-align: middle;
+}
+
+/* Responsive Announcements */
+@media (max-width: $breakpoint-md) {
+  .announcement-card__header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .announcement-card__date {
+    align-self: flex-start;
+  }
+  
+  .announcement-card__footer {
+    flex-direction: column;
+    gap: 0.75rem;
+    align-items: flex-start;
+  }
+  
+  .announcement-title {
+    font-size: 2rem;
+  }
+  
+  .announcement-meta {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+  
+  .social-links {
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  .social-links .btn {
+    width: 100%;
+  }
+}
+
+@media (max-width: $breakpoint-sm) {
+  .stay-connected {
+    padding: 2rem 1.5rem;
+  }
+  
+  .stay-connected h3 {
+    font-size: 1.5rem;
+  }
+  
+  .announcement-card {
+    padding: 1rem;
+  }
+  
+  .announcement-card__title {
+    font-size: 1.25rem;
+  }
+  
+  .announcement-title {
+    font-size: 1.75rem;
+  }
+}
