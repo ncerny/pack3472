@@ -1,30 +1,32 @@
 ---
 layout: home
-title: Pack 3472 Cub Scouts
-hero_title: Welcome to Pack 3472!
-hero_subtitle: Adventure, Fun, and Learning for Elementary School Kids
+title: Pack 3472 Cub Scouts - Leawood, KS
+hero_title: PACK 3472
+hero_subtitle: Leawood, KS
 ---
 
-## Welcome to Pack 3472!
+## Welcome!
 
-We're a fun and active Cub Scout pack serving families in Springfield, IL. Our scouts explore the outdoors, learn new skills, make lifelong friends, and develop character through hands-on adventures.
+We are glad you have found your way to the Pack 3472 website! Our pack welcomes both boys and girls in grades K-5! We are a very active, outdoor focused pack! Our Cub Scouts attend Prairie Star, Sunrise Point, Overland Trail, Barstow, AMI, and multiple other schools so all are welcome!
 
-### What We Do
+If you and your son/daughter would like to learn more about Cub Scouting, we'd love to have you visit one of our monthly Pack meetings where we gather all of the kids together for fun activities!
 
-Pack 3472 meets weekly for exciting activities including camping trips, service projects, STEM challenges, outdoor adventures, and community events. Scouts earn badges and ranks as they progress from kindergarten through 5th grade.
+### When We Meet
 
-### Join Our Pack!
+**{{ site.data.pack-info.meeting_info.frequency }}**  
+**Time**: {{ site.data.pack-info.meeting_info.time }}
 
-We welcome new scouts year-round! Cub Scouting is for boys and girls in kindergarten through 5th grade. No prior scouting experience is needed.
+We are returning to an exciting, action-pack year of activities! Our Pack IS sensitive to Covid needs and will monitor the current conditions and guidelines with our Health Committee of several doctors. The SAFTEY of our Scouts and families is as paramount as HAVING FUN, BEING GOOD SCOUTS, and BEING OUTDOORS!!
 
-**Meeting Time**: {{ site.data.pack-info.meeting_info.day }}s at {{ site.data.pack-info.meeting_info.time }}  
-**Location**: {{ site.data.pack-info.meeting_info.location.name }}
+### Chartering Organization
+
+**{{ site.data.pack-info.chartered_organization_full }}**
 
 [Join Pack 3472](/pages/join){:.btn .btn-primary} [Contact Us](/pages/contact){:.btn .btn-secondary}
 
 ---
 
-## Upcoming Events
+## Pack 3472 In Action!
 
 Check out what's happening in Pack 3472! View our [full calendar](/pages/calendar) for all upcoming events.
 

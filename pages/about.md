@@ -7,11 +7,13 @@ permalink: /about/
 
 ## About Pack 3472
 
-Pack 3472 is a vibrant Cub Scout pack chartered by {{ site.data.pack-info.chartered_organization }} and serving families in the {{ site.data.pack-info.district }} District of the {{ site.data.pack-info.council }}. We've been providing character-building adventures for elementary school children since our founding.
+Pack 3472 is a vibrant Cub Scout pack chartered by {{ site.data.pack-info.chartered_organization_full }} and serving families in the {{ site.data.pack-info.district }} of the {{ site.data.pack-info.council }}. We are a very active, outdoor focused pack! Our Cub Scouts attend Prairie Star, Sunrise Point, Overland Trail, Barstow, AMI, and multiple other schools so all are welcome!
 
-### Our Mission
+### Welcome!
 
-We aim to build character, develop citizenship, and promote personal fitness in youth through fun, hands-on activities and outdoor adventures. Every scout in Pack 3472 learns valuable life skills while making friends and creating memories that last a lifetime.
+We are glad you have found your way to the Pack 3472 website! Our pack welcomes both boys and girls in grades K-5. We are a very active, outdoor focused pack! 
+
+If you and your son/daughter would like to learn more about Cub Scouting, we'd love to have you visit one of our monthly Pack meetings where we gather all of the kids together for fun activities!
 
 ### What is Cub Scouting?
 

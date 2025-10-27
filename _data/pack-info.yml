@@ -1,19 +1,21 @@
 pack_number: 3472
 pack_name: 'Pack 3472'
-chartered_organization: 'Lincoln Elementary School PTA'
-council: 'Great Rivers Council'
-district: 'Pioneer District'
+chartered_organization: 'PSE PTO'
+chartered_organization_full: 'Prairie Star Elementary School PTO'
+council: 'Heart of America Council'
+district: 'Leawood District'
 
 meeting_info:
   day: 'Tuesday'
-  time: '6:30 PM - 7:30 PM'
+  time: '6:30 PM - 7:45 PM'
+  frequency: 'Second Tuesday of every month'
   location:
-    name: 'Lincoln Elementary School'
-    address: '123 Main Street'
-    city: 'Springfield'
-    state: 'IL'
-    zip: '62701'
-    google_maps_url: 'https://goo.gl/maps/example'
+    name: 'Prairie Star Elementary School'
+    address: '4900 W 179th Street'
+    city: 'Leawood'
+    state: 'KS'
+    zip: '66224'
+    google_maps_url: 'https://goo.gl/maps/PrairieStarElementary'
 
 contact:
   email: 'info@pack3472.org'
